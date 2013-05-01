@@ -35,7 +35,3 @@ CLASSES
         cancel_sync(self, orgName, prodId)
 
         last_sync_status(self, orgName, prodId)
-
-        update_filters(self, orgName, prodId, filters)
-
-        filters(self, orgName, prodId)
