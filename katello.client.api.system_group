@@ -1,0 +1,32 @@
+MODULE NAME
+    katello.client.api.system_group
+
+
+CLASSES
+
+    class SystemGroupAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access environment calls
+
+
+        system_groups(self, org_id, query={})
+
+        system_group(self, org_id, system_group_id, query={})
+
+        system_group_by_name(self, org_id, system_group_name, query={})
+
+        system_group_systems(self, org_id, system_group_id, query={})
+
+        lock(self, org_id, system_group_id, query={})
+
+        unlock(self, org_id, system_group_id, query={})
+
+        create(self, org_id, name, description, max_systems)
+
+        update(self, org_id, system_group_id, name, description,
+               max_systems)
+
+        delete(self, org_id, system_group_id)
+
+        add_systems(self, org_id, system_group_id, system_ids)
+
+        remove_systems(self, org_id, system_group_id, system_ids)

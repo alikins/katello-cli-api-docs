@@ -22,3 +22,8 @@ CLASSES
         remove_pool(self, keyId, poolid)
 
         delete(self, keyId)
+
+        add_system_group(self, org_name, activation_key_id, system_group_id)
+
+        remove_system_group(self, org_name, activation_key_id,
+                            system_group_id)
