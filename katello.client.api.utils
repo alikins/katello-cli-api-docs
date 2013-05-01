@@ -28,3 +28,5 @@ FUNCTIONS
     get_sync_plan(org_name, name)
 
     get_permission(role_name, permission_name)
+
+    get_filter(org_name, name)

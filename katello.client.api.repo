@@ -42,3 +42,7 @@ CLASSES
         packagegroupcategories(self, repoid)
 
         packagegroupcategory_by_id(self, repoid, categoryId)
+
+        update_filters(self, repo_id, filters)
+
+        filters(self, repo_id)
