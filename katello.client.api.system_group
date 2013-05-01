@@ -12,6 +12,8 @@ CLASSES
 
         system_group(self, org_id, system_group_id, query={})
 
+        system_group_history(self, org_id, system_group_id, query={})
+
         system_group_by_name(self, org_id, system_group_name, query={})
 
         system_group_systems(self, org_id, system_group_id, query={})

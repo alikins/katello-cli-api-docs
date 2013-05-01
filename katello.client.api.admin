@@ -8,4 +8,4 @@ CLASSES
         Various administrative actions
 
 
-        crl_regen(self, query=None)
+        crl_regen(self, query={})
