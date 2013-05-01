@@ -19,5 +19,3 @@ CLASSES
         delete(self, role_id)
 
         update(self, role_id, name, desc)
-
-        available_verbs(self, orgName)
