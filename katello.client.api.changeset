@@ -20,3 +20,7 @@ CLASSES
         promote(self, csId)
 
         update_content(self, csId, patch)
+
+        add_content(self, csId, contentType, attrs)
+
+        remove_content(self, csId, contentType, attrs)
