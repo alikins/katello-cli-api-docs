@@ -8,12 +8,18 @@ CLASSES
         Connection class to access environment calls
 
 
-        register(self, name, org, envName, cp_type)
+        register(self, name, org, envName, activation_keys, cp_type)
 
         unregister(self, system_id)
 
         system(self, system_id)
 
+        packages(self, system_id)
+
+        update(self, system_id, params={})
+
         systems_by_org(self, orgId, query={})
 
         systems_by_env(self, orgId, envName, query={})
+
+        errata(self, system_id)

@@ -10,7 +10,7 @@ CLASSES
 
         products_by_org(self, orgName, prodName=None)
 
-        products_by_env(self, orgName, envName)
+        products_by_env(self, envId)
 
         products_by_provider(self, provId, prodName=None)
 
@@ -18,6 +18,6 @@ CLASSES
 
         product_by_name(self, orgName, prodName)
 
-        create(self, provId, name, description, url)
+        create(self, provId, name, description)
 
         sync(self, prodId)

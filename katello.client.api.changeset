@@ -15,8 +15,8 @@ CLASSES
 
         create(self, orgName, envId, name)
 
-        delete(self, orgName, envId, csId)
+        delete(self, csId)
 
-        promote(self, orgName, envId, csId)
+        promote(self, csId)
 
-        update_content(self, orgName, envId, csId, patch)
+        update_content(self, csId, patch)
