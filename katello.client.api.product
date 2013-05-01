@@ -21,3 +21,5 @@ CLASSES
         create(self, provId, name, description)
 
         sync(self, prodId)
+
+        last_sync_status(self, prodId)

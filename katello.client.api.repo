@@ -20,6 +20,8 @@ CLASSES
 
         sync(self, repo_id)
 
+        last_sync_status(self, repo_id)
+
         repo_discovery(self, url, repotype)
 
         repo_discovery_status(self, discoveryTaskId)
