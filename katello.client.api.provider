@@ -18,8 +18,6 @@ CLASSES
 
         providers_by_org(self, orgId)
 
-        provider(self, provId)
-
         provider_by_name(self, orgName, provName)
 
         sync(self, provId)

@@ -14,8 +14,6 @@ CLASSES
 
         products_by_provider(self, provId, prodName=None)
 
-        products(self)
-
         product_by_name(self, orgName, prodName)
 
         create(self, provId, name, description)
