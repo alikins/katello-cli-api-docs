@@ -4,6 +4,8 @@ MODULE NAME
 
 FUNCTIONS
 
+    get_organization(orgName)
+
     get_environment(orgName, envName=None)
 
     get_product(orgName, prodName)
