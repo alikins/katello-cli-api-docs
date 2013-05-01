@@ -16,7 +16,7 @@ CLASSES
         update(self, user_id, pw, email, disabled, default_environment,
                default_locale=None)
 
-        users(self, query={})
+        users(self, query=None)
 
         user(self, user_id)
 
@@ -30,4 +30,4 @@ CLASSES
 
         roles(self, user_id)
 
-        report(self, format)
+        report(self, format_in)

@@ -15,9 +15,9 @@ CLASSES
 
         import_tpl(self, envId, description, tplFile)
 
-        validate_tpl(self, tplId, format)
+        validate_tpl(self, tplId, format_in)
 
-        export_tpl(self, tplId, format)
+        export_tpl(self, tplId, format_in)
 
         create(self, envId, name, description, parentId)
 

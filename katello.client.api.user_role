@@ -10,7 +10,7 @@ CLASSES
 
         create(self, name, description)
 
-        roles(self, query={})
+        roles(self, query=None)
 
         role(self, role_id)
 

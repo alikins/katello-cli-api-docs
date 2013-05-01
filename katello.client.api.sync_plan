@@ -13,7 +13,7 @@ CLASSES
         update(self, org_id, plan_id, name, sync_date, interval,
                description)
 
-        sync_plans(self, org_id, query={})
+        sync_plans(self, org_id, query=None)
 
         sync_plan(self, org_id, plan_id)
 

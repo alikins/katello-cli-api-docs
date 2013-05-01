@@ -8,10 +8,10 @@ CLASSES
         Connection class to access Permissions
 
 
-        create(self, roleId, name, description, type, verbs, tagIds,
-               orgId=None)
+        create(self, roleId, name, description, type_in, verbs, tagIds,
+               orgId=None, all_tags=False)
 
-        permissions(self, roleId, query={})
+        permissions(self, roleId, query=None)
 
         permission(self, roleId, permissionId)
 
