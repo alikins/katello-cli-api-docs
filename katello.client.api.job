@@ -1,0 +1,12 @@
+MODULE NAME
+    katello.client.api.job
+
+
+CLASSES
+
+    class SystemGroupJobStatusAPI(katello.client.api.base.KatelloAPI)
+
+
+        __init__(self, org_id, system_group_id)
+
+        status(self, jobId)
