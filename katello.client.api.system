@@ -9,7 +9,7 @@ CLASSES
 
 
         register(self, name, org, environment_id, activation_keys, cp_type,
-                 release=None, sla=None, facts={})
+                 release=None, sla=None, facts=None)
 
         unregister(self, system_uuid)
 
@@ -17,7 +17,8 @@ CLASSES
 
         subscriptions(self, system_id)
 
-        available_pools(self, system_id)
+        available_pools(self, system_id, match_system=False,
+                        match_installed=False, no_overlap=False)
 
         unsubscribe(self, system_id, entitlement)
 
@@ -27,7 +28,8 @@ CLASSES
 
         system(self, system_id)
 
-        tasks(self, org_name, environment_id, system_name)
+        tasks(self, org_name, environment_id, system_name=None,
+              system_uuid=None)
 
         packages(self, system_id)
 
@@ -35,7 +37,7 @@ CLASSES
 
         releases_for_environment(self, env_id)
 
-        update(self, system_id, params={})
+        update(self, system_id, params=None)
 
         install_packages(self, system_id, packages)
 
@@ -47,15 +49,15 @@ CLASSES
 
         remove_package_groups(self, system_id, packages)
 
-        systems_by_org(self, orgId, query={})
+        systems_by_org(self, orgId, query=None)
 
-        systems_by_env(self, org_name, environment_id, query={})
+        systems_by_env(self, environment_id, query=None)
 
         errata(self, system_id)
 
-        report_by_org(self, orgId, format)
+        report_by_org(self, orgId, format_in)
 
-        report_by_env(self, env_id, format)
+        report_by_env(self, env_id, format_in)
 
         add_system_groups(self, system_id, system_group_ids)
 

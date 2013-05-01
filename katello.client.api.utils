@@ -61,4 +61,4 @@ FUNCTIONS
 
     get_system_group(org_name, system_group_name)
 
-    get_system(org_name, sys_name, env_name=None)
+    get_system(org_name, sys_name, env_name=None, sys_uuid=None)
