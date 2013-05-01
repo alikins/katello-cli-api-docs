@@ -8,7 +8,7 @@ CLASSES
         Connection class to access repositories
 
 
-        create(self, prod_id, name, url, gpgkey, nogpgkey)
+        create(self, orgName, prod_id, name, url, gpgkey, nogpgkey)
 
         update(self, repo_id, gpgkey, nogpgkey)
 
@@ -17,7 +17,7 @@ CLASSES
         repos_by_env_product(self, envId, productId, name=None,
                              includeDisabled=False)
 
-        repos_by_product(self, productId, includeDisabled=False)
+        repos_by_product(self, orgName, productId, includeDisabled=False)
 
         repo(self, repo_id)
 
@@ -42,3 +42,7 @@ CLASSES
         packagegroupcategories(self, repoid)
 
         packagegroupcategory_by_id(self, repoid, categoryId)
+
+        update_filters(self, repo_id, filters)
+
+        filters(self, repo_id, inherit=False)

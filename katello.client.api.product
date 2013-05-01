@@ -18,23 +18,23 @@ CLASSES
 
         create(self, provId, name, description, gpgkey)
 
-        update(self, prodId, description, gpgkey, nogpgkey,
+        update(self, orgName, prodId, description, gpgkey, nogpgkey,
                gpgkey_recursive)
 
-        show(self, prodId)
+        show(self, orgName, prodId)
 
-        delete(self, prodId)
+        delete(self, orgName, prodId)
 
-        sync(self, prodId)
+        sync(self, orgName, prodId)
 
-        set_sync_plan(self, prodId, planId)
+        set_sync_plan(self, orgName, prodId, planId)
 
-        remove_sync_plan(self, prodId)
+        remove_sync_plan(self, orgName, prodId)
 
-        cancel_sync(self, prodId)
+        cancel_sync(self, orgName, prodId)
 
-        last_sync_status(self, prodId)
+        last_sync_status(self, orgName, prodId)
 
-        update_filters(self, prodId, filters)
+        update_filters(self, orgName, prodId, filters)
 
-        filters(self, prodId)
+        filters(self, orgName, prodId)
