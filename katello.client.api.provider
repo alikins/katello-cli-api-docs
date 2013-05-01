@@ -5,7 +5,7 @@ MODULE NAME
 CLASSES
 
     class ProviderAPI(katello.client.api.base.KatelloAPI)
-        Connection class to access provider specific calls
+        Connection class to access repo specific calls
 
 
         create(self, name, orgName, description=None, pType=None, url=None)
@@ -22,8 +22,6 @@ CLASSES
 
         sync(self, provId)
 
-        cancel_sync(self, provId)
-
         last_sync_status(self, provId)
 
-        import_manifest(self, provId, manifestFile, force=False)
+        import_manifest(self, provId, manifestFile)

@@ -8,25 +8,14 @@ FUNCTIONS
 
     get_environment(orgName, envName=None)
 
-    get_library(orgName)
+    get_locker(orgName)
 
     get_product(orgName, prodName)
 
-    get_repo(orgName, prodName, repoName, envName=None,
-             includeDisabled=False)
+    get_repo(orgName, prodName, repoName, envName=None)
 
     get_provider(orgName, provName)
 
     get_template(orgName, envName, tplName)
 
     get_changeset(orgName, envName, csName)
-
-    get_user(userName)
-
-    get_role(name)
-
-    get_sync_plan(org_name, name)
-
-    get_permission(role_name, permission_name)
-
-    get_filter(org_name, name)

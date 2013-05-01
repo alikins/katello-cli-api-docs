@@ -12,4 +12,4 @@ CLASSES
 
         errata_by_repo(self, repoId, type=None)
 
-        errata(self, errata_id, repoId)
+        errata(self, errata_id)
