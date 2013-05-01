@@ -26,4 +26,4 @@ CLASSES
 
         last_sync_status(self, provId)
 
-        import_manifest(self, provId, manifestFile)
+        import_manifest(self, provId, manifestFile, force=False)
