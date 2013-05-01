@@ -20,6 +20,8 @@ CLASSES
 
         user_by_name(self, user_name)
 
+        sync_ldap_roles(self)
+
         assign_role(self, user_id, role_id)
 
         unassign_role(self, user_id, role_id)
