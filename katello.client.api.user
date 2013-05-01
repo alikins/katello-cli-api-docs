@@ -8,21 +8,17 @@ CLASSES
         Connection class to access User Data
 
 
-        create(self, name, pw, email, disabled, default_environment,
-               default_locale=None)
+        create(self, name, pw, email, disabled)
 
         delete(self, user_id)
 
-        update(self, user_id, pw, email, disabled, default_environment,
-               default_locale=None)
+        update(self, user_id, pw, email, disabled)
 
         users(self, query={})
 
         user(self, user_id)
 
         user_by_name(self, user_name)
-
-        sync_ldap_roles(self)
 
         assign_role(self, user_id, role_id)
 

@@ -11,5 +11,3 @@ CLASSES
         package(self, packageId, repoId)
 
         packages_by_repo(self, repoId)
-
-        search(self, query, repoId)

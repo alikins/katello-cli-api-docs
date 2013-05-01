@@ -21,9 +21,3 @@ CLASSES
         update(self, role_id, name, desc)
 
         available_verbs(self, orgName)
-
-        add_ldap_group(self, role_id, group_name)
-
-        remove_ldap_group(self, role_id, group_name)
-
-        ldap_groups(self, role_id)

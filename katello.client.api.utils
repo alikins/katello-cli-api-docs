@@ -1,34 +1,6 @@
 MODULE NAME
     katello.client.api.utils
 
-DESCRIPTION
-    Bunch of api utilities for finding records by their names. Katello API
-    uses integer ids for record identification in most cases. These util
-    functions help with translating names to ids. All of them throw
-    ApiDataError if any of the records is not found.
-
-
-CLASSES
-
-    class ApiDataError(exceptions.Exception)
-        Exception to indicate an error in search for data via api. The only
-        argument is the error message.
-
-        :argument: localized error message
-
-        Inherited methods
-            exceptions.BaseException.__delattr__(...)
-            exceptions.BaseException.__getattribute__(...)
-            exceptions.BaseException.__getitem__(x, y)
-            exceptions.BaseException.__getslice__(x, i, j)
-            exceptions.Exception.__init__(...)
-            exceptions.Exception.__new__(T, S, *...)
-            exceptions.BaseException.__reduce__(...)
-            exceptions.BaseException.__repr__(x)
-            exceptions.BaseException.__setattr__(...)
-            exceptions.BaseException.__setstate__(...)
-            exceptions.BaseException.__str__(x)
-            exceptions.BaseException.__unicode__(...)
 
 FUNCTIONS
 
@@ -58,7 +30,3 @@ FUNCTIONS
     get_permission(role_name, permission_name)
 
     get_filter(org_name, name)
-
-    get_system_group(org_name, system_group_name)
-
-    get_system(org_name, sys_name, env_name=None)

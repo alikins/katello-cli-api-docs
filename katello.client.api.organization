@@ -18,6 +18,6 @@ CLASSES
 
         organization(self, name)
 
-        uebercert(self, name, regenerate=False)
+        uebercert(self, name)
 
         pools(self, name)
