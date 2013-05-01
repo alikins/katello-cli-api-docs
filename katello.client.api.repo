@@ -45,4 +45,4 @@ CLASSES
 
         update_filters(self, repo_id, filters)
 
-        filters(self, repo_id)
+        filters(self, repo_id, inherit=False)
