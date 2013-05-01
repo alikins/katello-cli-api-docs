@@ -8,7 +8,7 @@ FUNCTIONS
 
     get_environment(orgName, envName=None)
 
-    get_locker(orgName)
+    get_library(orgName)
 
     get_product(orgName, prodName)
 

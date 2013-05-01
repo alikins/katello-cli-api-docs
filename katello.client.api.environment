@@ -14,7 +14,7 @@ CLASSES
 
         environment_by_name(self, orgId, envName)
 
-        locker_by_org(self, orgId)
+        library_by_org(self, orgId)
 
         create(self, orgId, name, description, priorId)
 
