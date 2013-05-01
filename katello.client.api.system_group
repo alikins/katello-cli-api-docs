@@ -18,11 +18,10 @@ CLASSES
 
         system_group_systems(self, org_id, system_group_id, query={})
 
-        lock(self, org_id, system_group_id, query={})
-
-        unlock(self, org_id, system_group_id, query={})
-
         create(self, org_id, name, description, max_systems)
+
+        copy(self, org_id, system_group_id, new_name, description,
+             max_systems)
 
         update(self, org_id, system_group_id, name, description,
                max_systems)
@@ -44,5 +43,7 @@ CLASSES
         update_package_groups(self, org_id, system_group_id, packages)
 
         remove_package_groups(self, org_id, system_group_id, packages)
+
+        errata(self, org_id, system_group_id, type=None)
 
         install_errata(self, org_id, system_group_id, errata)
