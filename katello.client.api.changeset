@@ -13,7 +13,7 @@ CLASSES
 
         changeset_by_name(self, orgName, envId, csName)
 
-        create(self, orgName, envId, name, description=None)
+        create(self, orgName, envId, name, type, description=None)
 
         update(self, csId, newName, description)
 
@@ -21,7 +21,7 @@ CLASSES
 
         dependencies(self, csId)
 
-        promote(self, csId)
+        apply(self, csId)
 
         update_content(self, csId, patch)
 
