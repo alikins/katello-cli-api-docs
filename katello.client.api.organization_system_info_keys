@@ -1,0 +1,18 @@
+MODULE NAME
+    katello.client.api.organization_system_info_keys
+
+
+CLASSES
+
+    class OrganizationSystemInfoKeysAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access default system info keys under an
+        organization
+
+
+        create(self, org_name, keyname)
+
+        index(self, org_name)
+
+        destroy(self, org_name, keyname)
+
+        apply(self, org_name)

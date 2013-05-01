@@ -28,4 +28,6 @@ CLASSES
 
         import_manifest(self, provId, manifestFile, force=False)
 
+        delete_manifest(self, provId)
+
         refresh_products(self, provId)

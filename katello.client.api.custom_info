@@ -14,7 +14,6 @@ CLASSES
         get_custom_info(self, informable_type, informable_id, keyname=None)
 
         update_custom_info(self, informable_type, informable_id, keyname,
-                           current_value, value)
+                           new_value)
 
-        remove_custom_info(self, informable_type, informable_id,
-                           keyname=None, value=None)
+        remove_custom_info(self, informable_type, informable_id, keyname)

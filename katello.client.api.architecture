@@ -1,0 +1,25 @@
+MODULE NAME
+    katello.client.api.architecture
+
+
+CLASSES
+
+    class ArchitectureAPI(katello.client.api.base.KatelloAPI)
+
+
+        index(self, queries=None)
+            :type queries: dict :param queries: queries for filtering the
+            architectures
+
+        show(self, arch_id)
+            :type arch_id: string :param arch_id: architecture identifier
+
+        create(self, data)
+            :type data['name']: string
+
+        update(self, arch_id, data)
+            :type arch_id: string :param arch_id: architecture identifier
+            :type data['name']: string
+
+        destroy(self, arch_id)
+            :type arch_id: string :param arch_id: architecture identifier
