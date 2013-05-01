@@ -8,7 +8,8 @@ CLASSES
         Connection class to access environment calls
 
 
-        register(self, name, org, envName, activation_keys, cp_type)
+        register(self, name, org, envName, activation_keys, cp_type,
+                 release=None)
 
         unregister(self, system_uuid)
 
@@ -29,6 +30,10 @@ CLASSES
         tasks(self, org_name, env_name, system_name)
 
         packages(self, system_id)
+
+        releases_for_system(self, system_id)
+
+        releases_for_environment(self, env_id)
 
         update(self, system_id, params={})
 
