@@ -8,9 +8,6 @@ CLASSES
         Connection class to access errata calls
 
 
-        errata_filter(self, repo_id=None, environment_id=None, prod_id=None,
-                      type_in=None, severity=None)
+        errata_by_repo(self, repoId)
 
-        errata_by_repo(self, repoId, type_in=None)
-
-        errata(self, errata_id, repoId)
+        errata(self, errata_id)

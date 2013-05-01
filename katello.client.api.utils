@@ -1,34 +1,6 @@
 MODULE NAME
     katello.client.api.utils
 
-DESCRIPTION
-    Bunch of api utilities for finding records by their names. Katello API
-    uses integer ids for record identification in most cases. These util
-    functions help with translating names to ids. All of them throw
-    ApiDataError if any of the records is not found.
-
-
-CLASSES
-
-    class ApiDataError(exceptions.Exception)
-        Exception to indicate an error in search for data via api. The only
-        argument is the error message.
-
-        :argument: localized error message
-
-        Inherited methods
-            exceptions.BaseException.__delattr__(...)
-            exceptions.BaseException.__getattribute__(...)
-            exceptions.BaseException.__getitem__(x, y)
-            exceptions.BaseException.__getslice__(x, i, j)
-            exceptions.Exception.__init__(...)
-            exceptions.Exception.__new__(T, S, *...)
-            exceptions.BaseException.__reduce__(...)
-            exceptions.BaseException.__repr__(x)
-            exceptions.BaseException.__setattr__(...)
-            exceptions.BaseException.__setstate__(...)
-            exceptions.BaseException.__str__(x)
-            exceptions.BaseException.__unicode__(...)
 
 FUNCTIONS
 
@@ -36,33 +8,14 @@ FUNCTIONS
 
     get_environment(orgName, envName=None)
 
-    get_library(orgName)
+    get_locker(orgName)
 
-    get_product(orgName, prodName=None, prodLabel=None, prodId=None)
-        Retrieve product by name, label or id.
+    get_product(orgName, prodName)
 
-    get_content_view(org_name, view_label=None, view_name=None,
-                     view_id=None)
-
-    get_cv_definition(org_name, def_label=None, def_name=None, def_id=None)
-
-    get_repo(orgName, repoName, prodName=None, prodLabel=None, prodId=None,
-             envName=None, includeDisabled=False)
+    get_repo(orgName, prodName, repoName, envName=None)
 
     get_provider(orgName, provName)
 
+    get_template(orgName, envName, tplName)
+
     get_changeset(orgName, envName, csName)
-
-    get_user(userName)
-
-    get_role(name)
-
-    get_sync_plan(org_name, name)
-
-    get_permission(role_name, permission_name)
-
-    get_system_group(org_name, system_group_name)
-
-    get_system(org_name, sys_name, env_name=None, sys_uuid=None)
-
-    get_distributor(org_name, dist_name, env_name=None, dist_uuid=None)

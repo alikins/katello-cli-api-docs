@@ -14,30 +14,12 @@ CLASSES
 
         products_by_provider(self, provId, prodName=None)
 
-        product_by_name_or_label_or_id(self, orgName, prodName, prodLabel,
-                                       prodId)
+        product_by_name(self, orgName, prodName)
 
-        create(self, provId, name, label, description, gpgkey)
+        create(self, provId, name, description)
 
-        update(self, orgName, prodId, description, gpgkey, nogpgkey,
-               gpgkey_recursive)
+        delete(self, prodId)
 
-        show(self, orgName, prodId)
+        sync(self, prodId)
 
-        delete(self, orgName, prodId)
-
-        sync(self, orgName, prodId)
-
-        set_sync_plan(self, orgName, prodId, planId)
-
-        remove_sync_plan(self, orgName, prodId)
-
-        cancel_sync(self, orgName, prodId)
-
-        last_sync_status(self, orgName, prodId)
-
-        repository_sets(self, orgName, prodId)
-
-        enable_repository_set(self, orgName, prodId, repoSetId)
-
-        disable_repository_set(self, orgName, prodId, repoSetId)
+        last_sync_status(self, prodId)

@@ -9,9 +9,9 @@ CLASSES
         after instantiation.
 
 
-        __init__(self)
-            x.__init__(...) initializes x; see x.__class__.__doc__ for
-            signature
+        update_dict(self, d, key, value)
+            Update value for key in fictionary only if the value is not
+            None.
 
         Instance variables
 

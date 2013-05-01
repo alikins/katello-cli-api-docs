@@ -8,7 +8,7 @@ CLASSES
         Connection class to access Organization Data
 
 
-        create(self, name, label, description)
+        create(self, name, description)
 
         delete(self, name)
 
@@ -18,6 +18,6 @@ CLASSES
 
         organization(self, name)
 
-        uebercert(self, name, regenerate=False)
+        generate_uebercert(self, name)
 
-        pools(self, name)
+        uebercert(self, name)

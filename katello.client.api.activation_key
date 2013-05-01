@@ -11,20 +11,14 @@ CLASSES
 
         activation_keys_by_environment(self, envId)
 
-        activation_key(self, orgId, keyId)
+        activation_key(self, keyId)
 
-        create(self, envId, name, description, usage_limit=-1, view_id=None)
+        create(self, envId, name, description, templateId=None)
 
-        update(self, orgId, keyId, environmentId, name, description,
-               usage_limit, view_id)
+        update(self, keyId, environmentId, name, description, templateId)
 
-        add_pool(self, orgId, keyId, poolid)
+        add_pool(self, keyId, poolid)
 
-        remove_pool(self, orgId, keyId, poolid)
+        remove_pool(self, keyId, poolid)
 
-        delete(self, orgId, keyId)
-
-        add_system_group(self, org_name, activation_key_id, system_group_id)
-
-        remove_system_group(self, org_name, activation_key_id,
-                            system_group_id)
+        delete(self, keyId)

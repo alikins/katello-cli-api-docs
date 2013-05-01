@@ -8,8 +8,7 @@ CLASSES
         Connection class to access environment calls
 
 
-        register(self, name, org, environment_id, activation_keys, cp_type,
-                 release=None, sla=None, facts=None, view_id=None)
+        register(self, name, org, envName, activation_keys, cp_type)
 
         unregister(self, system_uuid)
 
@@ -17,50 +16,18 @@ CLASSES
 
         subscriptions(self, system_id)
 
-        available_pools(self, system_id, match_system=False,
-                        match_installed=False, no_overlap=False)
+        available_pools(self, system_id)
 
-        unsubscribe(self, system_id, entitlement)
-
-        unsubscribe_by_serial(self, system_id, serial)
-
-        unsubscribe_all(self, system_id)
+        unsubscribe(self, system_id, pool)
 
         system(self, system_id)
 
-        tasks(self, org_name, environment_id, system_name=None,
-              system_uuid=None)
-
         packages(self, system_id)
 
-        releases_for_system(self, system_id)
+        update(self, system_id, params={})
 
-        releases_for_environment(self, env_id)
+        systems_by_org(self, orgId, query={})
 
-        update(self, system_id, params=None)
-
-        install_packages(self, system_id, packages)
-
-        remove_packages(self, system_id, packages)
-
-        update_packages(self, system_id, packages)
-
-        install_package_groups(self, system_id, packages)
-
-        remove_package_groups(self, system_id, packages)
-
-        systems_by_org(self, orgId, query=None)
-
-        systems_by_env(self, environment_id, query=None)
+        systems_by_env(self, orgId, envName, query={})
 
         errata(self, system_id)
-
-        report_by_org(self, orgId, format_in)
-
-        report_by_env(self, env_id, format_in)
-
-        add_system_groups(self, system_id, system_group_ids)
-
-        remove_system_groups(self, system_id, system_group_ids)
-
-        remove_consumer_deletion_record(self, uuid)
