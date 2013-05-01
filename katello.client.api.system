@@ -56,3 +56,5 @@ CLASSES
         report_by_org(self, orgId, format)
 
         report_by_env(self, env_id, format)
+
+        remove_consumer_deletion_record(self, uuid)
