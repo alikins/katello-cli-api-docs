@@ -1,0 +1,18 @@
+MODULE NAME
+    katello.client.api.gpg_key
+
+
+CLASSES
+
+    class GpgKeyAPI(katello.client.api.base.KatelloAPI)
+
+
+        gpg_keys_by_organization(self, orgId, keyName=None)
+
+        gpg_key(self, keyId)
+
+        create(self, orgName, name, content)
+
+        update(self, keyId, name, content)
+
+        delete(self, keyId)

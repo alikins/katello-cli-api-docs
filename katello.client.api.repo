@@ -8,7 +8,9 @@ CLASSES
         Connection class to access repositories
 
 
-        create(self, prod_id, name, url)
+        create(self, prod_id, name, url, gpgkey, nogpgkey)
+
+        update(self, repo_id, gpgkey, nogpgkey)
 
         repos_by_org_env(self, orgName, envId, includeDisabled=False)
 
