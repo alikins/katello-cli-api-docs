@@ -1,12 +1,20 @@
 MODULE NAME
     katello.client.api.utils
 
+DESCRIPTION
+    Bunch of api utilities for finding records by their names. Katello API
+    uses integer ids for record identification in most cases. These util
+    functions help with translating names to ids. All of them throw
+    ApiDataError if any of the records is not found.
+
 
 CLASSES
 
     class ApiDataError(exceptions.Exception)
         Exception to indicate an error in search for data via api. The only
-        argument is [0] the error message.
+        argument is the error message.
+
+        :argument: localized error message
 
         Inherited methods
             exceptions.BaseException.__delattr__(...)
