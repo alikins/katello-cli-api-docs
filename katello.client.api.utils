@@ -8,6 +8,8 @@ FUNCTIONS
 
     get_environment(orgName, envName=None)
 
+    get_locker(orgName)
+
     get_product(orgName, prodName)
 
     get_repo(orgName, prodName, repoName, envName=None)
