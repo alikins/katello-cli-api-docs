@@ -13,12 +13,6 @@ CLASSES
             x.__init__(...) initializes x; see x.__class__.__doc__ for
             signature
 
-        Class methods
-
-            update_dict(cls, d, key, value)
-                Update value for key in fictionary only if the value is not
-                None.
-
         Instance variables
 
             server(self)

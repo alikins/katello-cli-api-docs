@@ -28,7 +28,8 @@ CLASSES
 
         system(self, system_id)
 
-        tasks(self, org_name, environment_id, system_name)
+        tasks(self, org_name, environment_id, system_name=None,
+              system_uuid=None)
 
         packages(self, system_id)
 
