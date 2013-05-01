@@ -51,8 +51,6 @@ FUNCTIONS
 
     get_provider(orgName, provName)
 
-    get_template(orgName, envName, tplName)
-
     get_changeset(orgName, envName, csName)
 
     get_user(userName)
@@ -66,3 +64,5 @@ FUNCTIONS
     get_system_group(org_name, system_group_name)
 
     get_system(org_name, sys_name, env_name=None, sys_uuid=None)
+
+    get_distributor(org_name, dist_name, env_name=None, dist_uuid=None)

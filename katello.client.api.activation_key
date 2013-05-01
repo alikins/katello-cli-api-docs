@@ -13,11 +13,10 @@ CLASSES
 
         activation_key(self, orgId, keyId)
 
-        create(self, envId, name, description, usage_limit=-1,
-               templateId=None, view_id=None)
+        create(self, envId, name, description, usage_limit=-1, view_id=None)
 
         update(self, orgId, keyId, environmentId, name, description,
-               templateId, usage_limit, view_id)
+               usage_limit, view_id)
 
         add_pool(self, orgId, keyId, poolid)
 

@@ -1,0 +1,35 @@
+MODULE NAME
+    katello.client.api.distributor
+
+
+CLASSES
+
+    class DistributorAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access environment calls
+
+
+        create(self, name, org, environment_id, cp_type='candlepin')
+
+        delete(self, distributor_uuid)
+
+        subscribe(self, distributor_id, pool, quantity)
+
+        subscriptions(self, distributor_id)
+
+        available_pools(self, distributor_id)
+
+        unsubscribe(self, distributor_id, entitlement)
+
+        unsubscribe_by_serial(self, distributor_id, serial)
+
+        unsubscribe_all(self, distributor_id)
+
+        distributor(self, distributor_id)
+
+        update(self, distributor_id, params=None)
+
+        distributor_by_name(self, orgName, distName)
+
+        distributors_by_org(self, orgId, query=None)
+
+        distributors_by_env(self, environment_id, query=None)
