@@ -16,7 +16,7 @@ CLASSES
 
         product_by_name(self, orgName, prodName)
 
-        create(self, provId, name, description, gpgkey)
+        create(self, provId, name, label, description, gpgkey)
 
         update(self, orgName, prodId, description, gpgkey, nogpgkey,
                gpgkey_recursive)

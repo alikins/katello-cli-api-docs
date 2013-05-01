@@ -1,0 +1,20 @@
+MODULE NAME
+    katello.client.api.custom_info
+
+
+CLASSES
+
+    class CustomInfoAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access custom info calls
+
+
+        add_custom_info(self, informable_type, informable_id, keyname,
+                        value)
+
+        get_custom_info(self, informable_type, informable_id, keyname=None)
+
+        update_custom_info(self, informable_type, informable_id, keyname,
+                           current_value, value)
+
+        remove_custom_info(self, informable_type, informable_id,
+                           keyname=None, value=None)
