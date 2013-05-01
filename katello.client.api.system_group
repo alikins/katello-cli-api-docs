@@ -12,7 +12,7 @@ CLASSES
 
         system_group(self, org_id, system_group_id, query={})
 
-        system_group_history(self, org_id, system_group_id, query={})
+        system_group_history(self, org_id, system_group_id, job_id=None)
 
         system_group_by_name(self, org_id, system_group_name, query={})
 
@@ -32,3 +32,17 @@ CLASSES
         add_systems(self, org_id, system_group_id, system_ids)
 
         remove_systems(self, org_id, system_group_id, system_ids)
+
+        install_packages(self, org_id, system_group_id, packages)
+
+        update_packages(self, org_id, system_group_id, packages)
+
+        remove_packages(self, org_id, system_group_id, packages)
+
+        install_package_groups(self, org_id, system_group_id, packages)
+
+        update_package_groups(self, org_id, system_group_id, packages)
+
+        remove_package_groups(self, org_id, system_group_id, packages)
+
+        install_errata(self, org_id, system_group_id, errata)
