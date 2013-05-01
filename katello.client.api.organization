@@ -8,7 +8,7 @@ CLASSES
         Connection class to access Organization Data
 
 
-        create(self, name, description)
+        create(self, name, label, description)
 
         delete(self, name)
 
