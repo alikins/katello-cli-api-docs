@@ -8,12 +8,14 @@ CLASSES
         Connection class to access User Data
 
 
-        create(self, name, pw, disabled)
+        create(self, name, pw, email, disabled)
 
         delete(self, user_id)
 
-        update(self, user_id, pw, disabled)
+        update(self, user_id, pw, email, disabled)
 
         users(self, query={})
 
         user(self, user_id)
+
+        report(self, format)

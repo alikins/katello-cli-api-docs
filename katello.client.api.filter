@@ -5,21 +5,15 @@ MODULE NAME
 CLASSES
 
     class FilterAPI(katello.client.api.base.KatelloAPI)
-        Connection class to access content view filter calls
+        Connection class to access Filter Data
 
 
-        filters_by_cvd_and_org(self, def_id, org_id)
+        filters(self, org)
 
-        get_filter_info(self, filter_name, def_id, org_id)
+        create(self, org, name, description, filter_list)
 
-        create(self, filter_name, def_id, org_id)
+        delete(self, org, name)
 
-        delete(self, filter_name, def_id, org_id)
+        info(self, org, name)
 
-        products(self, filter_name, def_id, org_id)
-
-        update_products(self, filter_name, def_id, org_id, products)
-
-        repos(self, filter_name, def_id, org_id)
-
-        update_repos(self, filter_name, def_id, org_id, repos)
+        update_packages(self, org, name, package_list)

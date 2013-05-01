@@ -18,8 +18,16 @@ CLASSES
 
         create(self, provId, name, description)
 
+        show(self, prodId)
+
         delete(self, prodId)
 
         sync(self, prodId)
 
+        cancel_sync(self, prodId)
+
         last_sync_status(self, prodId)
+
+        update_filters(self, prodId, filters)
+
+        filters(self, prodId)

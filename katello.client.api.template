@@ -15,6 +15,10 @@ CLASSES
 
         import_tpl(self, envId, description, tplFile)
 
+        validate_tpl(self, tplId, format)
+
+        export_tpl(self, tplId, format)
+
         create(self, envId, name, description, parentId)
 
         update(self, tplId, newName, description, parentId)
@@ -26,3 +30,7 @@ CLASSES
         promotion_status(self, task_id)
 
         delete(self, template_id)
+
+        Class variables
+
+            format_content_type = {'json': 'application/json', 'tdl': 'a...

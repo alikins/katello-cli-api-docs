@@ -31,3 +31,7 @@ CLASSES
         systems_by_env(self, orgId, envName, query={})
 
         errata(self, system_id)
+
+        report_by_org(self, orgId, format)
+
+        report_by_env(self, orgId, envName, format)
