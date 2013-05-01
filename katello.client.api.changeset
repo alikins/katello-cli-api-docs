@@ -17,6 +17,8 @@ CLASSES
 
         delete(self, csId)
 
+        dependencies(self, csId)
+
         promote(self, csId)
 
         update_content(self, csId, patch)
