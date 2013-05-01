@@ -14,12 +14,14 @@ CLASSES
 
         update(self, provId, name, description=None, url=None)
 
-        providers(self)
-
         providers_by_org(self, orgId)
+
+        provider(self, provId)
 
         provider_by_name(self, orgName, provName)
 
         sync(self, provId)
+
+        last_sync_status(self, provId)
 
         import_manifest(self, provId, manifestFile)
