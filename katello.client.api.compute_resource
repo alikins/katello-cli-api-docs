@@ -1,0 +1,81 @@
+MODULE NAME
+    katello.client.api.compute_resource
+
+
+CLASSES
+
+    class ComputeResourceAPI(katello.client.api.base.KatelloAPI)
+
+
+        index(self, queries=None)
+            :type queries: dict :param queries: queries for filtering
+            compute resources
+
+        show(self, resource_id)
+            :type resource_id: string :param resource_id: compute resource
+            identifier
+
+        create(self, data)
+            :type name: string
+
+            :type provider: string :param provider: Provider type, one of:
+            Libvirt Ovirt EC2 Vmware Openstack Rackspace
+
+            :type url: string :param url: URL for Libvirt, Ovirt, and
+            Openstack
+
+            :type description: string
+
+            :type user: string :param user: Username for Ovirt, EC2,
+            Vmware, Openstack. Access Key for EC2.
+
+            :type password: string :param password: Password for Ovirt,
+            EC2, Vmware, Openstack. Secret key for EC2
+
+            :type uuid: string :param uuid: for Ovirt, Vmware Datacenter
+
+            :type region: string :param region: for EC2 only
+
+            :type tenant: string :param tenant: for Openstack only
+
+            :type server: string :param server: for Vmware
+
+        update(self, resource_id, data)
+            :type resource_id: string :param resource_id: compute resource
+            identifier
+
+            :type data['name']: string
+
+            :type data['provider']: string :param data['provider']:
+            Provider type, one of: Libvirt Ovirt EC2 Vmware Openstack
+            Rackspace
+
+            :type data['url']: string :param data['url']: URL for Libvirt,
+            Ovirt, and Openstack
+
+            :type data['description']: string
+
+            :type data['user']: string :param data['user']: Username for
+            Ovirt, EC2, Vmware, Openstack. Access Key for EC2.
+
+            :type data['password']: string :param data['password']:
+            Password for Ovirt, EC2, Vmware, Openstack. Secret key for EC2
+
+            :type data['uuid']: string :param data['uuid']: for Ovirt,
+            Vmware Datacenter
+
+            :type data['region']: string :param data['region']: for EC2
+            only
+
+            :type data['tenant']: string :param data['tenant']: for
+            Openstack only
+
+            :type data['server']: string :param data['server']: for Vmware
+
+        destroy(self, resource_id)
+            :type resource_id: string :param resource_id: resource
+            identifier
+
+        Class methods
+
+            __path(cls, resource_id=None)
