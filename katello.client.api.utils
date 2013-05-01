@@ -8,7 +8,7 @@ FUNCTIONS
 
     get_environment(orgName, envName=None)
 
-    get_locker(orgName)
+    get_library(orgName)
 
     get_product(orgName, prodName)
 
@@ -28,3 +28,5 @@ FUNCTIONS
     get_sync_plan(org_name, name)
 
     get_permission(role_name, permission_name)
+
+    get_filter(org_name, name)
