@@ -38,9 +38,10 @@ FUNCTIONS
 
     get_library(orgName)
 
-    get_product(orgName, prodName)
+    get_product(orgName, prodName=None, prodLabel=None, prodId=None)
+        Retrieve product by name, label or id.
 
-    get_repo(orgName, prodName, repoName, envName=None,
+    get_repo(orgName, prodName, prodLabel, prodId, repoName, envName=None,
              includeDisabled=False)
 
     get_provider(orgName, provName)

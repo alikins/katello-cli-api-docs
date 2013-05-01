@@ -14,7 +14,8 @@ CLASSES
 
         products_by_provider(self, provId, prodName=None)
 
-        product_by_name(self, orgName, prodName)
+        product_by_name_or_label_or_id(self, orgName, prodName, prodLabel,
+                                       prodId)
 
         create(self, provId, name, label, description, gpgkey)
 
