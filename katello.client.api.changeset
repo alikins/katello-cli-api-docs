@@ -13,7 +13,7 @@ CLASSES
 
         changeset_by_name(self, orgName, envId, csName)
 
-        create(self, orgName, envId, name)
+        create(self, orgName, envId, name, description=None)
 
         delete(self, csId)
 
