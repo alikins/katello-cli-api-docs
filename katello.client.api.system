@@ -18,7 +18,11 @@ CLASSES
 
         available_pools(self, system_id)
 
-        unsubscribe(self, system_id, pool)
+        unsubscribe(self, system_id, entitlement)
+
+        unsubscribe_by_serial(self, system_id, serial)
+
+        unsubscribe_all(self, system_id)
 
         system(self, system_id)
 
