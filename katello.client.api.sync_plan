@@ -1,0 +1,22 @@
+MODULE NAME
+    katello.client.api.sync_plan
+
+
+CLASSES
+
+    class SyncPlanAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access SyncPlans
+
+
+        create(self, org_id, name, sync_date, interval, description)
+
+        update(self, org_id, plan_id, name, sync_date, interval,
+               description)
+
+        sync_plans(self, org_id, query={})
+
+        sync_plan(self, org_id, plan_id)
+
+        sync_plan_by_name(self, org_id, name)
+
+        delete(self, org_id, plan_id)
