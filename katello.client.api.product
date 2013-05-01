@@ -35,3 +35,9 @@ CLASSES
         cancel_sync(self, orgName, prodId)
 
         last_sync_status(self, orgName, prodId)
+
+        repository_sets(self, orgName, prodId)
+
+        enable_repository_set(self, orgName, prodId, repoSetId)
+
+        disable_repository_set(self, orgName, prodId, repoSetId)

@@ -1,0 +1,43 @@
+MODULE NAME
+    katello.client.api.hardware_model
+
+
+CLASSES
+
+    class HardwareModelAPI(katello.client.api.base.KatelloAPI)
+
+
+        list(self)
+            list hardware model
+
+        show(self, model_id)
+            show hardware model
+
+            :type  model_id: string :param model_id: hardware model name
+
+        create(self, data)
+            create hardware model
+
+            :type  data['name']: string :param data['name']: :type
+            data['info']: string :param data['info']: :type
+            data['vendor_class']: string :param data['vendor_class']: :type
+            data['hardware_model']: string :param data['hardware_model']:
+
+        update(self, model_id, data)
+            update hardware model
+
+            :type  model_id: string :param model_id: hardware model name
+            :type  data: hash :param data: hardware model info :type
+            data['name']: string :param data['name']: :type  data['info']:
+            string :param data['info']: :type  data['vendor_class']: string
+            :param data['vendor_class']: :type  data['hardware_model']:
+            string :param data['hardware_model']:
+
+        destroy(self, model_id)
+            destroy hardware model
+
+            :type  model_id: string :param model_id: hardware model name
+
+        Class methods
+
+            __path(cls, model_id=None)

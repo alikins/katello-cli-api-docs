@@ -15,15 +15,13 @@ CLASSES
 
         show(self, org_id, cvd_id)
 
-        create(self, org_id, name, label, description, composite=False)
+        create(self, org_id, name, label, description)
 
         update(self, org, cvd_id, name, description)
 
         delete(self, cvd_id)
 
         publish(self, org_id, cvd_id, name, label=None, description=None)
-
-        clone(self, org, cvd_id, name, label=None, description=None)
 
         products(self, org, cvd_id)
 

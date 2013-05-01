@@ -1,0 +1,17 @@
+MODULE NAME
+    katello.client.api.organization_default_info
+
+
+CLASSES
+
+    class OrganizationDefaultInfoAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access default info keys under an organization
+
+
+        create(self, org_name, informable_type, keyname)
+
+        index(self, org_name, informable_type)
+
+        destroy(self, org_name, informable_type, keyname)
+
+        apply(self, org_name, informable_type)
