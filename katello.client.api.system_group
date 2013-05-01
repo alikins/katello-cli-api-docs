@@ -47,3 +47,5 @@ CLASSES
         errata(self, org_id, system_group_id, type_in=None)
 
         install_errata(self, org_id, system_group_id, errata)
+
+        update_systems(self, org_id, system_group_id, env_id, view_id)

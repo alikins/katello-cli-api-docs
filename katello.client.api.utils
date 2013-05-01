@@ -41,12 +41,15 @@ FUNCTIONS
     get_product(orgName, prodName=None, prodLabel=None, prodId=None)
         Retrieve product by name, label or id.
 
-    get_repo(orgName, prodName, prodLabel, prodId, repoName, envName=None,
-             includeDisabled=False)
+    get_content_view(org_name, view_label=None, view_name=None,
+                     view_id=None)
+
+    get_cv_definition(org_name, def_label=None, def_name=None, def_id=None)
+
+    get_repo(orgName, repoName, prodName=None, prodLabel=None, prodId=None,
+             envName=None, includeDisabled=False)
 
     get_provider(orgName, provName)
-
-    get_template(orgName, envName, tplName)
 
     get_changeset(orgName, envName, csName)
 
@@ -61,3 +64,5 @@ FUNCTIONS
     get_system_group(org_name, system_group_name)
 
     get_system(org_name, sys_name, env_name=None, sys_uuid=None)
+
+    get_distributor(org_name, dist_name, env_name=None, dist_uuid=None)
