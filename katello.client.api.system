@@ -22,9 +22,21 @@ CLASSES
 
         system(self, system_id)
 
+        tasks(self, org_name, env_name, system_name)
+
         packages(self, system_id)
 
         update(self, system_id, params={})
+
+        install_packages(self, system_id, packages)
+
+        remove_packages(self, system_id, packages)
+
+        update_packages(self, system_id, packages)
+
+        install_package_groups(self, system_id, packages)
+
+        remove_package_groups(self, system_id, packages)
 
         systems_by_org(self, orgId, query={})
 

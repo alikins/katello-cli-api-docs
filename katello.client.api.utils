@@ -22,3 +22,7 @@ FUNCTIONS
     get_changeset(orgName, envName, csName)
 
     get_user(userName)
+
+    get_role(name)
+
+    get_permission(role_name, permission_name)
