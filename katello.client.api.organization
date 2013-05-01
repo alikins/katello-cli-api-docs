@@ -18,8 +18,6 @@ CLASSES
 
         organization(self, name)
 
-        generate_uebercert(self, name)
-
         uebercert(self, name)
 
         pools(self, name)
