@@ -1,0 +1,21 @@
+MODULE NAME
+    katello.client.api.user_role
+
+
+CLASSES
+
+    class UserRoleAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access User Data
+
+
+        create(self, name, description)
+
+        roles(self, query={})
+
+        role(self, role_id)
+
+        role_by_name(self, name)
+
+        delete(self, role_id)
+
+        update(self, role_id, name, desc)
