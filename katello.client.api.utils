@@ -20,3 +20,5 @@ FUNCTIONS
     get_template(orgName, envName, tplName)
 
     get_changeset(orgName, envName, csName)
+
+    get_user(userName)

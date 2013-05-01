@@ -18,4 +18,12 @@ CLASSES
 
         user(self, user_id)
 
+        user_by_name(self, user_name)
+
+        assign_role(self, user_id, role_id)
+
+        unassign_role(self, user_id, role_id)
+
+        roles(self, user_id)
+
         report(self, format)
