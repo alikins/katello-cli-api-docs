@@ -8,6 +8,6 @@ CLASSES
         Connection class to access package calls
 
 
-        package(self, packageId)
+        package(self, packageId, repoId)
 
         packages_by_repo(self, repoId)
