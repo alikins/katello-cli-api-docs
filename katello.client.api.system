@@ -9,7 +9,7 @@ CLASSES
 
 
         register(self, name, org, envName, activation_keys, cp_type,
-                 release=None)
+                 release=None, sla=None)
 
         unregister(self, system_uuid)
 
