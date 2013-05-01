@@ -10,4 +10,4 @@ CLASSES
 
         distributions_by_repo(self, repoId)
 
-        distribution(self, distribution_id)
+        distribution(self, repoId, distribution_id)

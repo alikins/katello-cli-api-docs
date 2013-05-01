@@ -1,0 +1,20 @@
+MODULE NAME
+    katello.client.api.permission
+
+
+CLASSES
+
+    class PermissionAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access Permissions
+
+
+        create(self, roleId, name, description, type, verbs, tagIds,
+               orgId=None)
+
+        permissions(self, roleId, query={})
+
+        permission(self, roleId, permissionId)
+
+        permission_by_name(self, roleId, name)
+
+        delete(self, roleId, permissionId)
