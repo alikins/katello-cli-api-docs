@@ -31,6 +31,10 @@ CLASSES
 
         last_sync_status(self, repo_id)
 
+        repo_discovery(self, org_name, url, repotype)
+
+        repo_discovery_status(self, discoveryTaskId)
+
         packagegroups(self, repoid)
 
         packagegroup_by_id(self, repoid, groupId)
@@ -38,3 +42,7 @@ CLASSES
         packagegroupcategories(self, repoid)
 
         packagegroupcategory_by_id(self, repoid, categoryId)
+
+        update_filters(self, repo_id, filters)
+
+        filters(self, repo_id, inherit=False)

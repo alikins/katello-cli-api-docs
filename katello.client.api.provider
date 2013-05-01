@@ -31,5 +31,3 @@ CLASSES
         delete_manifest(self, provId)
 
         refresh_products(self, provId)
-
-        repo_discovery(self, provId, url)
