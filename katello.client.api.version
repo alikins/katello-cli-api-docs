@@ -1,0 +1,13 @@
+MODULE NAME
+    katello.client.api.version
+
+
+CLASSES
+
+    class VersionAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access  version information
+
+
+        version(self)
+
+        version_formatted(self)

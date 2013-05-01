@@ -8,7 +8,7 @@ CLASSES
         Connection class to access environment calls
 
 
-        register(self, name, org, envName, activation_keys, cp_type,
+        register(self, name, org, environment_id, activation_keys, cp_type,
                  release=None, sla=None, facts={})
 
         unregister(self, system_uuid)
@@ -27,7 +27,7 @@ CLASSES
 
         system(self, system_id)
 
-        tasks(self, org_name, env_name, system_name)
+        tasks(self, org_name, environment_id, system_name)
 
         packages(self, system_id)
 
@@ -49,7 +49,7 @@ CLASSES
 
         systems_by_org(self, orgId, query={})
 
-        systems_by_env(self, orgId, envName, query={})
+        systems_by_env(self, org_name, environment_id, query={})
 
         errata(self, system_id)
 
