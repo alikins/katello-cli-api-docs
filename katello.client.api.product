@@ -24,6 +24,8 @@ CLASSES
 
         sync(self, prodId)
 
+        cancel_sync(self, prodId)
+
         last_sync_status(self, prodId)
 
         update_filters(self, prodId, filters)
