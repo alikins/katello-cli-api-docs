@@ -27,7 +27,7 @@ CLASSES
         update(self, org_id, system_group_id, name, description,
                max_systems)
 
-        delete(self, org_id, system_group_id)
+        delete(self, org_id, system_group_id, delete_systems)
 
         add_systems(self, org_id, system_group_id, system_ids)
 
