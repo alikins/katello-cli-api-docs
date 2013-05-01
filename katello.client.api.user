@@ -17,3 +17,5 @@ CLASSES
         users(self, query={})
 
         user(self, user_id)
+
+        report(self, format)

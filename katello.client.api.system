@@ -10,7 +10,15 @@ CLASSES
 
         register(self, name, org, envName, activation_keys, cp_type)
 
-        unregister(self, system_id)
+        unregister(self, system_uuid)
+
+        subscribe(self, system_id, pool, quantity)
+
+        subscriptions(self, system_id)
+
+        available_pools(self, system_id)
+
+        unsubscribe(self, system_id, pool)
 
         system(self, system_id)
 
@@ -23,3 +31,7 @@ CLASSES
         systems_by_env(self, orgId, envName, query={})
 
         errata(self, system_id)
+
+        report_by_org(self, orgId, format)
+
+        report_by_env(self, orgId, envName, format)

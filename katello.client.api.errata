@@ -5,9 +5,11 @@ MODULE NAME
 CLASSES
 
     class ErrataAPI(katello.client.api.base.KatelloAPI)
-        Connection class to access errata calls
 
 
-        errata_by_repo(self, repoId)
+        errata_filter(self, repo_id=None, environment_id=None, prod_id=None,
+                      type=None, severity=None)
+
+        errata_by_repo(self, repoId, type=None)
 
         errata(self, errata_id)

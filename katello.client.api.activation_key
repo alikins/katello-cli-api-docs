@@ -17,4 +17,8 @@ CLASSES
 
         update(self, keyId, environmentId, name, description, templateId)
 
+        add_pool(self, keyId, poolid)
+
+        remove_pool(self, keyId, poolid)
+
         delete(self, keyId)

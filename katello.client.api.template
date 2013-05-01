@@ -15,13 +15,15 @@ CLASSES
 
         import_tpl(self, envId, description, tplFile)
 
+        export_tpl(self, tplId, format)
+
         create(self, envId, name, description, parentId)
 
         update(self, tplId, newName, description, parentId)
 
-        update_content(self, tplId, actionName, params)
+        add_content(self, tplId, contentType, attrs)
 
-        promote(self, template_id)
+        remove_content(self, tplId, contentType, contentId)
 
         promotion_status(self, task_id)
 

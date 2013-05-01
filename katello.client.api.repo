@@ -12,11 +12,13 @@ CLASSES
 
         repos_by_org_env(self, orgName, envId)
 
-        repos_by_env_product(self, envId, productId)
+        repos_by_env_product(self, envId, productId, name=None)
 
         repos_by_product(self, productId)
 
         repo(self, repo_id)
+
+        delete(self, repoId)
 
         sync(self, repo_id)
 
@@ -28,4 +30,8 @@ CLASSES
 
         packagegroups(self, repoid)
 
+        packagegroup_by_id(self, repoid, groupId)
+
         packagegroupcategories(self, repoid)
+
+        packagegroupcategory_by_id(self, repoid, categoryId)
