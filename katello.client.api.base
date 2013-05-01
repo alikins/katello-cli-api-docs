@@ -1,0 +1,20 @@
+MODULE NAME
+    katello.client.api.base
+
+
+CLASSES
+
+    class KatelloAPI(object)
+        Base api class that allows an internal server object to be set
+        after instantiation.
+
+
+        update_dict(self, d, key, value)
+            Update value for key in fictionary only if the value is not
+            None.
+
+        Instance variables
+
+            server(self)
+
+        Inherited methods

@@ -1,0 +1,147 @@
+MODULE NAME
+    katello.client.core.provider
+
+
+CLASSES
+
+    class ProviderAction(katello.client.core.base.Action)
+
+
+        __init__(self)
+
+    class SingleProviderAction(ProviderAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        Inherited methods
+            katello.client.core.provider.ProviderAction.__init__(self)
+
+    class List(ProviderAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('list all known providers')
+
+        Inherited methods
+            katello.client.core.provider.ProviderAction.__init__(self)
+
+    class Info(SingleProviderAction)
+
+
+        run(self)
+
+        Class variables
+
+            description = _('list information about a provider')
+
+        Inherited methods
+            katello.client.core.provider.ProviderAction.__init__(self)
+            katello.client.core.provider.SingleProviderAction.check_options(self)
+            katello.client.core.provider.SingleProviderAction.setup_parser(self)
+
+    class Update(ProviderAction)
+
+
+        description(self)
+
+        __init__(self, create=False)
+
+        setup_parser(self)
+
+        check_options(self)
+
+        create(self, name, orgName, description, url)
+
+        update(self, name, orgName, newName, description, url)
+
+        run(self)
+
+    class Delete(SingleProviderAction)
+
+
+        run(self)
+
+        Class variables
+
+            description = _('delete a provider')
+
+        Inherited methods
+            katello.client.core.provider.ProviderAction.__init__(self)
+            katello.client.core.provider.SingleProviderAction.check_options(self)
+            katello.client.core.provider.SingleProviderAction.setup_parser(self)
+
+    class Sync(SingleProviderAction)
+
+
+        run(self)
+
+        sync_provider(self, providerName, orgName)
+
+        Class variables
+
+            description = _('synchronize a provider')
+
+        Inherited methods
+            katello.client.core.provider.ProviderAction.__init__(self)
+            katello.client.core.provider.SingleProviderAction.check_options(self)
+            katello.client.core.provider.SingleProviderAction.setup_parser(self)
+
+    class CancelSync(SingleProviderAction)
+
+
+        run(self)
+
+        Class variables
+
+            description = _('cancel currently running synchronization')
+
+        Inherited methods
+            katello.client.core.provider.ProviderAction.__init__(self)
+            katello.client.core.provider.SingleProviderAction.check_options(self)
+            katello.client.core.provider.SingleProviderAction.setup_parser(self)
+
+    class Status(SingleProviderAction)
+
+
+        run(self)
+
+        Class variables
+
+            description = _('status of provider\'s synchronization')
+
+        Inherited methods
+            katello.client.core.provider.ProviderAction.__init__(self)
+            katello.client.core.provider.SingleProviderAction.check_options(self)
+            katello.client.core.provider.SingleProviderAction.setup_parser(self)
+
+    class ImportManifest(SingleProviderAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('import a manifest file')
+
+        Inherited methods
+            katello.client.core.provider.ProviderAction.__init__(self)
+
+    class Provider(katello.client.core.base.Command)
+
+        Class variables
+
+            description = _('provider specific actions in the katello se...

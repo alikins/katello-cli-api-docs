@@ -1,0 +1,13 @@
+MODULE NAME
+    katello.client.api.errata
+
+
+CLASSES
+
+    class ErrataAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access errata calls
+
+
+        errata_by_repo(self, repoId)
+
+        errata(self, errata_id)

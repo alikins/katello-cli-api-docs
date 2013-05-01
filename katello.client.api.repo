@@ -1,0 +1,25 @@
+MODULE NAME
+    katello.client.api.repo
+
+
+CLASSES
+
+    class RepoAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access repositories
+
+
+        create(self, prod_id, name, url)
+
+        repos_by_org_env(self, orgName, envId)
+
+        repos_by_env_product(self, envId, productId)
+
+        repos_by_product(self, productId)
+
+        repo(self, repo_id)
+
+        sync(self, repo_id)
+
+        repo_discovery(self, url, repotype)
+
+        repo_discovery_status(self, discoveryTaskId)

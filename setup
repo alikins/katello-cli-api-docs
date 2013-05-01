@@ -1,0 +1,13 @@
+MODULE NAME
+    setup
+
+
+FUNCTIONS
+
+    data_files()
+
+VARIABLES
+
+    packages = ["katello", "katello.client", "katello.client.api", "kate...
+
+    requires = "kerberos", "M2Crypto", "iniparse", "simplejson", "dateutil"

@@ -1,0 +1,160 @@
+MODULE NAME
+    katello.client.core.template
+
+
+CLASSES
+
+    class TemplateAction(katello.client.core.base.Action)
+
+
+        __init__(self)
+
+        get_parent_id(self, orgName, envName, parentName)
+
+    class List(TemplateAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('list all templates')
+
+        Inherited methods
+            katello.client.core.template.TemplateAction.__init__(self)
+            katello.client.core.template.TemplateAction.get_parent_id(self, orgName, envName, parentName)
+
+    class Info(TemplateAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        _build_nvrea(self, package)
+
+        Class variables
+
+            description = _('list information about a template')
+
+        Inherited methods
+            katello.client.core.template.TemplateAction.__init__(self)
+            katello.client.core.template.TemplateAction.get_parent_id(self, orgName, envName, parentName)
+
+    class Import(TemplateAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        open_file(self, path)
+
+        Class variables
+
+            description = _('create a template file and import data')
+
+        Inherited methods
+            katello.client.core.template.TemplateAction.__init__(self)
+            katello.client.core.template.TemplateAction.get_parent_id(self, orgName, envName, parentName)
+
+    class Export(TemplateAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        open_file(self, path)
+
+        Class variables
+
+            description = _('export the template into the file')
+
+            supported_formats = ['json', 'tdl']
+
+        Inherited methods
+            katello.client.core.template.TemplateAction.__init__(self)
+            katello.client.core.template.TemplateAction.get_parent_id(self, orgName, envName, parentName)
+
+    class Create(TemplateAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('create an empty template file')
+
+        Inherited methods
+            katello.client.core.template.TemplateAction.__init__(self)
+            katello.client.core.template.TemplateAction.get_parent_id(self, orgName, envName, parentName)
+
+    class Update(TemplateAction)
+
+
+        __init__(self)
+
+        store_parameter_name(self, option, opt_str, value, parser)
+
+        store_parameter_value(self, option, opt_str, value, parser)
+
+        setup_parser(self)
+
+        check_options(self)
+
+        resetParameters(self)
+
+        getContent(self)
+
+        run(self)
+
+        productNamesToIds(self, orgName, productNames)
+
+        updateTemplate(self, tplId, name, desc, parentId)
+
+        updateContent(self, tplId, content)
+
+        Class variables
+
+            description = _('updates name and description of a template')
+
+        Inherited methods
+            katello.client.core.template.TemplateAction.get_parent_id(self, orgName, envName, parentName)
+
+    class Delete(TemplateAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('deletes a template')
+
+        Inherited methods
+            katello.client.core.template.TemplateAction.__init__(self)
+            katello.client.core.template.TemplateAction.get_parent_id(self, orgName, envName, parentName)
+
+    class Template(katello.client.core.base.Command)
+
+        Class variables
+
+            description = _('template specific actions in the katello se...

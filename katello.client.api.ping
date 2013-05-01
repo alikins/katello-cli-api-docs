@@ -1,0 +1,11 @@
+MODULE NAME
+    katello.client.api.ping
+
+
+CLASSES
+
+    class PingAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access Organization Data
+
+
+        ping(self)

@@ -1,0 +1,23 @@
+MODULE NAME
+    katello.client.api.environment
+
+
+CLASSES
+
+    class EnvironmentAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access environment calls
+
+
+        environments_by_org(self, orgId)
+
+        environment_by_org(self, orgId, envId)
+
+        environment_by_name(self, orgId, envName)
+
+        locker_by_org(self, orgId)
+
+        create(self, orgId, name, description, priorId)
+
+        update(self, orgId, envId, name, description, priorId)
+
+        delete(self, orgId, envId)

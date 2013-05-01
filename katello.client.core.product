@@ -1,0 +1,221 @@
+MODULE NAME
+    katello.client.core.product
+
+
+CLASSES
+
+    class ProductAction(katello.client.core.base.Action)
+
+
+        __init__(self)
+
+    class SingleProductAction(ProductAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        set_product_select_options(self, select_by_env=True)
+
+        check_product_select_options(self)
+
+        Class variables
+
+            select_by_env = False
+
+        Inherited methods
+            katello.client.core.product.ProductAction.__init__(self)
+
+    class List(ProductAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('list known products')
+
+        Inherited methods
+            katello.client.core.product.ProductAction.__init__(self)
+
+    class Sync(SingleProductAction)
+
+
+        run(self)
+
+        Class variables
+
+            description = _('synchronize a product')
+
+            select_by_env = False
+
+        Inherited methods
+            katello.client.core.product.ProductAction.__init__(self)
+            katello.client.core.product.SingleProductAction.check_options(self)
+            katello.client.core.product.SingleProductAction.check_product_select_options(self)
+            katello.client.core.product.SingleProductAction.set_product_select_options(self, select_by_env=True)
+            katello.client.core.product.SingleProductAction.setup_parser(self)
+
+    class CancelSync(SingleProductAction)
+
+
+        run(self)
+
+        Class variables
+
+            description = _('cancel currently running synchronization')
+
+            select_by_env = False
+
+        Inherited methods
+            katello.client.core.product.ProductAction.__init__(self)
+            katello.client.core.product.SingleProductAction.check_options(self)
+            katello.client.core.product.SingleProductAction.check_product_select_options(self)
+            katello.client.core.product.SingleProductAction.set_product_select_options(self, select_by_env=True)
+            katello.client.core.product.SingleProductAction.setup_parser(self)
+
+    class Status(SingleProductAction)
+
+
+        run(self)
+
+        Class variables
+
+            description = _('status of product\'s synchronization')
+
+            select_by_env = False
+
+        Inherited methods
+            katello.client.core.product.ProductAction.__init__(self)
+            katello.client.core.product.SingleProductAction.check_options(self)
+            katello.client.core.product.SingleProductAction.check_product_select_options(self)
+            katello.client.core.product.SingleProductAction.set_product_select_options(self, select_by_env=True)
+            katello.client.core.product.SingleProductAction.setup_parser(self)
+
+    class Promote(SingleProductAction)
+
+
+        check_options(self)
+
+        run(self)
+
+        create_cs_name(self)
+
+        Class variables
+
+            description = _('promote a product to an environment\n(creat...
+
+            select_by_env = True
+
+        Inherited methods
+            katello.client.core.product.ProductAction.__init__(self)
+            katello.client.core.product.SingleProductAction.check_product_select_options(self)
+            katello.client.core.product.SingleProductAction.set_product_select_options(self, select_by_env=True)
+            katello.client.core.product.SingleProductAction.setup_parser(self)
+
+    class Create(ProductAction)
+
+
+        __init__(self)
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        create_product_with_repos(self, provName, orgName, name,
+                                  description, url, assumeyes, nodiscovery)
+
+        Class variables
+
+            description = _('create new product to a custom provider')
+
+    class Delete(SingleProductAction)
+
+
+        run(self)
+
+        Class variables
+
+            description = _('delete a product and its content')
+
+            select_by_env = False
+
+        Inherited methods
+            katello.client.core.product.ProductAction.__init__(self)
+            katello.client.core.product.SingleProductAction.check_options(self)
+            katello.client.core.product.SingleProductAction.check_product_select_options(self)
+            katello.client.core.product.SingleProductAction.set_product_select_options(self, select_by_env=True)
+            katello.client.core.product.SingleProductAction.setup_parser(self)
+
+    class ListFilters(SingleProductAction)
+
+
+        run(self)
+
+        Class variables
+
+            description = _('list filters of a product')
+
+            select_by_env = False
+
+        Inherited methods
+            katello.client.core.product.ProductAction.__init__(self)
+            katello.client.core.product.SingleProductAction.check_options(self)
+            katello.client.core.product.SingleProductAction.check_product_select_options(self)
+            katello.client.core.product.SingleProductAction.set_product_select_options(self, select_by_env=True)
+            katello.client.core.product.SingleProductAction.setup_parser(self)
+
+    class AddFilter(SingleProductAction)
+
+
+        __init__(self)
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('add a filter to a product')
+
+            select_by_env = False
+
+        Inherited methods
+            katello.client.core.product.SingleProductAction.check_product_select_options(self)
+            katello.client.core.product.SingleProductAction.set_product_select_options(self, select_by_env=True)
+
+    class DeleteFilter(SingleProductAction)
+
+
+        __init__(self)
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('delete a filter from a product')
+
+            select_by_env = False
+
+        Inherited methods
+            katello.client.core.product.SingleProductAction.check_product_select_options(self)
+            katello.client.core.product.SingleProductAction.set_product_select_options(self, select_by_env=True)
+
+    class Product(katello.client.core.base.Command)
+
+        Class variables
+
+            description = _('product specific actions in the katello ser...

@@ -1,0 +1,19 @@
+MODULE NAME
+    katello.client.api.user
+
+
+CLASSES
+
+    class UserAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access User Data
+
+
+        create(self, name, pw, disabled)
+
+        delete(self, user_id)
+
+        update(self, user_id, pw, disabled)
+
+        users(self, query={})
+
+        user(self, user_id)

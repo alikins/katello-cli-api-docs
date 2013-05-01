@@ -1,0 +1,35 @@
+MODULE NAME
+    katello.client.logutil
+
+
+FUNCTIONS
+
+    __logdir()
+
+    getLogger(name)
+
+VARIABLES
+
+    USRDIR = '~/.katello'
+
+    LOGDIR = '/var/log/katello'
+
+    LOGFILE = 'client.log'
+
+    TIME = '%(asctime)s'
+
+    LEVEL = ' [%(levelname)s]'
+
+    THREAD = '[%(threadName)s]'
+
+    FILE = ' @ %(filename)s'
+
+    LINE = ':%(lineno)d'
+
+    MSG = ' - %(message)s'
+
+    FUNCTION = ''
+
+    FMT = ''.join((TIME, LEVEL, THREAD, FUNCTION, FILE, LINE, MSG,))
+
+    handler = None

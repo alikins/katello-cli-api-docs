@@ -1,0 +1,13 @@
+MODULE NAME
+    katello.client.constants
+
+
+VARIABLES
+
+    STATUS_DETAIL_SUCCESS = ...
+
+    STATUS_DETAIL_FAIL = ...
+
+    STATUS_INFO = ...
+
+    SELECTION_QUERY = ...

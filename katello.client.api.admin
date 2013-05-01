@@ -1,0 +1,11 @@
+MODULE NAME
+    katello.client.api.admin
+
+
+CLASSES
+
+    class AdminAPI(katello.client.api.base.KatelloAPI)
+        Various administrative actions
+
+
+        crl_regen(self, query=None)

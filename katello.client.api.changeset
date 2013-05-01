@@ -1,0 +1,22 @@
+MODULE NAME
+    katello.client.api.changeset
+
+
+CLASSES
+
+    class ChangesetAPI(katello.client.api.base.KatelloAPI)
+
+
+        changesets(self, orgName, envId)
+
+        changeset(self, csId)
+
+        changeset_by_name(self, orgName, envId, csName)
+
+        create(self, orgName, envId, name)
+
+        delete(self, orgName, envId, csId)
+
+        promote(self, orgName, envId, csId)
+
+        update_content(self, orgName, envId, csId, patch)

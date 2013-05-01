@@ -1,0 +1,23 @@
+MODULE NAME
+    katello.client.api.product
+
+
+CLASSES
+
+    class ProductAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access environment calls
+
+
+        products_by_org(self, orgName, prodName=None)
+
+        products_by_env(self, orgName, envName)
+
+        products_by_provider(self, provId, prodName=None)
+
+        products(self)
+
+        product_by_name(self, orgName, prodName)
+
+        create(self, provId, name, description, url)
+
+        sync(self, prodId)

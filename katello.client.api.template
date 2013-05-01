@@ -1,0 +1,28 @@
+MODULE NAME
+    katello.client.api.template
+
+
+CLASSES
+
+    class TemplateAPI(katello.client.api.base.KatelloAPI)
+
+
+        templates(self, envId)
+
+        template(self, tplId)
+
+        template_by_name(self, envId, tplName)
+
+        import_tpl(self, envId, description, tplFile)
+
+        create(self, envId, name, description, parentId)
+
+        update(self, tplId, newName, description, parentId)
+
+        update_content(self, tplId, actionName, params)
+
+        promote(self, template_id)
+
+        promotion_status(self, task_id)
+
+        delete(self, template_id)

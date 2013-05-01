@@ -1,0 +1,192 @@
+MODULE NAME
+    katello.client.core.changeset
+
+
+CLASSES
+
+    class ChangesetAction(katello.client.core.base.Action)
+
+
+        __init__(self)
+
+    class List(ChangesetAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('list new changesets of an environment')
+
+        Inherited methods
+            katello.client.core.changeset.ChangesetAction.__init__(self)
+
+    class Info(ChangesetAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('detailed information about a changeset')
+
+        Inherited methods
+            katello.client.core.changeset.ChangesetAction.__init__(self)
+
+    class Create(ChangesetAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('create a new changeset for an environment')
+
+        Inherited methods
+            katello.client.core.changeset.ChangesetAction.__init__(self)
+
+    class UpdateContent(ChangesetAction)
+
+
+        __init__(self)
+
+        store_from_product(self, option, opt_str, value, parser)
+
+        store_item_with_product(self, option, opt_str, value, parser)
+
+        store_item(self, option, opt_str, value, parser)
+
+        setup_parser(self)
+
+        reset_items(self)
+
+        check_options(self)
+
+        run(self)
+
+        update_content(self, csId, patch, updateMethod)
+
+        Nested classes
+
+            class PatchBuilder(object)
+             |
+             |  Static methods
+             |
+             |      build_patch(action, itemBuilder, items)
+             |
+             |  Inherited methods
+
+            class PatchItemBuilder(object)
+             |
+             |
+             |  __init__(self, orgName, envName)
+             |      x.__init__(...) initializes x; see x.__class__.__doc__
+             |      for signature
+             |
+             |  product_id(self, options)
+             |
+             |  repo_id(self, options)
+             |
+             |  template_id(self, options)
+             |
+             |  Inherited methods
+
+            class AddPatchItemBuilder(PatchItemBuilder)
+             |
+             |
+             |  package(self, options)
+             |
+             |  product(self, options)
+             |
+             |  erratum(self, options)
+             |
+             |  repo(self, options)
+             |
+             |  template(self, options)
+             |
+             |  distro(self, options)
+             |
+             |  Inherited methods
+             |      katello.client.core.changeset.UpdateContent.PatchItemBuilder.__init__(self, orgName, envName)
+             |      katello.client.core.changeset.UpdateContent.PatchItemBuilder.product_id(self, options)
+             |      katello.client.core.changeset.UpdateContent.PatchItemBuilder.repo_id(self, options)
+             |      katello.client.core.changeset.UpdateContent.PatchItemBuilder.template_id(self, options)
+
+            class RemovePatchItemBuilder(PatchItemBuilder)
+             |
+             |
+             |  package(self, options)
+             |
+             |  product(self, options)
+             |
+             |  erratum(self, options)
+             |
+             |  repo(self, options)
+             |
+             |  template(self, options)
+             |
+             |  distro(self, options)
+             |
+             |  Inherited methods
+             |      katello.client.core.changeset.UpdateContent.PatchItemBuilder.__init__(self, orgName, envName)
+             |      katello.client.core.changeset.UpdateContent.PatchItemBuilder.product_id(self, options)
+             |      katello.client.core.changeset.UpdateContent.PatchItemBuilder.repo_id(self, options)
+             |      katello.client.core.changeset.UpdateContent.PatchItemBuilder.template_id(self, options)
+
+        Class variables
+
+            productDependentContent = ['package', 'erratum', 'repo', 'di...
+
+            productIndependentContent = ['product', 'template']
+
+            description = _('updates content of a changeset')
+
+    class Delete(ChangesetAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('deletes a changeset')
+
+        Inherited methods
+            katello.client.core.changeset.ChangesetAction.__init__(self)
+
+    class Promote(ChangesetAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('promotes a changeset to the next environment')
+
+        Inherited methods
+            katello.client.core.changeset.ChangesetAction.__init__(self)
+
+    class Changeset(katello.client.core.base.Command)
+
+        Class variables
+
+            description = _('changeset specific actions in the katello s...

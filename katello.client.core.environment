@@ -1,0 +1,103 @@
+MODULE NAME
+    katello.client.core.environment
+
+
+CLASSES
+
+    class EnvironmentAction(katello.client.core.base.Action)
+
+
+        __init__(self)
+
+        get_prior_id(self, orgName, priorName)
+
+    class List(EnvironmentAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('list known environments')
+
+        Inherited methods
+            katello.client.core.environment.EnvironmentAction.__init__(self)
+            katello.client.core.environment.EnvironmentAction.get_prior_id(self, orgName, priorName)
+
+    class Info(EnvironmentAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('list a specific envrionment')
+
+        Inherited methods
+            katello.client.core.environment.EnvironmentAction.__init__(self)
+            katello.client.core.environment.EnvironmentAction.get_prior_id(self, orgName, priorName)
+
+    class Create(EnvironmentAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('create an environment')
+
+        Inherited methods
+            katello.client.core.environment.EnvironmentAction.__init__(self)
+            katello.client.core.environment.EnvironmentAction.get_prior_id(self, orgName, priorName)
+
+    class Update(EnvironmentAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('update an environment')
+
+        Inherited methods
+            katello.client.core.environment.EnvironmentAction.__init__(self)
+            katello.client.core.environment.EnvironmentAction.get_prior_id(self, orgName, priorName)
+
+    class Delete(EnvironmentAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('delete an environment')
+
+        Inherited methods
+            katello.client.core.environment.EnvironmentAction.__init__(self)
+            katello.client.core.environment.EnvironmentAction.get_prior_id(self, orgName, priorName)
+
+    class Environment(katello.client.core.base.Command)
+
+        Class variables
+
+            description = _('environment specific actions in the katello...

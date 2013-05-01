@@ -1,0 +1,48 @@
+MODULE NAME
+    katello.client.core.package
+
+
+CLASSES
+
+    class PackageAction(katello.client.core.base.Action)
+
+
+        __init__(self)
+
+    class Info(PackageAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('list information about a package')
+
+        Inherited methods
+            katello.client.core.package.PackageAction.__init__(self)
+
+    class List(PackageAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('list packages in a repository')
+
+        Inherited methods
+            katello.client.core.package.PackageAction.__init__(self)
+
+    class Package(katello.client.core.base.Command)
+
+        Class variables
+
+            description = _('package specific actions in the katello ser...

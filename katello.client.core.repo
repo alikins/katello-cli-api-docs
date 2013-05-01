@@ -1,0 +1,270 @@
+MODULE NAME
+    katello.client.core.repo
+
+
+CLASSES
+
+    class RepoAction(katello.client.core.base.Action)
+
+
+        __init__(self)
+
+        get_repo(self)
+
+    class SingleRepoAction(RepoAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        set_repo_select_options(self, select_by_env=True)
+
+        check_repo_select_options(self)
+
+        Class variables
+
+            select_by_env = False
+
+        Inherited methods
+            katello.client.core.repo.RepoAction.__init__(self)
+            katello.client.core.repo.RepoAction.get_repo(self)
+
+    class Create(RepoAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('create a repository at a specified URL')
+
+        Inherited methods
+            katello.client.core.repo.RepoAction.__init__(self)
+            katello.client.core.repo.RepoAction.get_repo(self)
+
+    class Discovery(RepoAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        discover_repositories(self, org_name, url)
+
+        select_repositories(self, repourls, assumeyes, raw_input=raw_input)
+
+        create_repositories(self, productid, name, selectedurls)
+
+        repository_name(self, name, parsedUrlPath)
+
+        __print_urls(self, repourls, selectedurls)
+
+        Class variables
+
+            description = _('discovery repositories contained within a U...
+
+        Inherited methods
+            katello.client.core.repo.RepoAction.__init__(self)
+            katello.client.core.repo.RepoAction.get_repo(self)
+
+    class Selection(list)
+
+
+        add_selection(self, urls)
+
+        Inherited methods
+            list.__add__(x, y)
+            list.__contains__(x, y)
+            list.__delitem__(x, y)
+            list.__delslice__(x, i, j)
+            list.__eq__(x, y)
+            list.__ge__(x, y)
+            list.__getattribute__(...)
+            list.__getitem__(x, y)
+            list.__getslice__(x, i, j)
+            list.__gt__(x, y)
+            list.__iadd__(x, y)
+            list.__imul__(x, y)
+            list.__init__()
+            list.__iter__(x)
+            list.__le__(x, y)
+            list.__len__(x)
+            list.__lt__(x, y)
+            list.__mul__(x, n)
+            list.__ne__(x, y)
+            list.__new__(T, S, *...)
+            list.__repr__(x)
+            list.__reversed__(L)
+            list.__rmul__(x, n)
+            list.__setitem__(x, i, y)
+            list.__setslice__(x, i, j, y)
+            list.__sizeof__(L)
+            list.append(L, object)
+            list.count(L, value)
+            list.extend(L, iterable)
+            list.index(...)
+            list.insert(L, index, object)
+            list.pop(L, index=...)
+            list.remove(L, value)
+            list.reverse(L)
+            list.sort(L, cmp=None, key=None, reverse=False)
+
+        Inherited class variables
+            list.__hash__ = None
+
+    class Status(SingleRepoAction)
+
+
+        run(self)
+
+        _format_error(self, errors)
+
+        Class variables
+
+            description = _('status information about a repository')
+
+            select_by_env = True
+
+        Inherited methods
+            katello.client.core.repo.RepoAction.__init__(self)
+            katello.client.core.repo.SingleRepoAction.check_options(self)
+            katello.client.core.repo.SingleRepoAction.check_repo_select_options(self)
+            katello.client.core.repo.RepoAction.get_repo(self)
+            katello.client.core.repo.SingleRepoAction.set_repo_select_options(self, select_by_env=True)
+            katello.client.core.repo.SingleRepoAction.setup_parser(self)
+
+    class Info(SingleRepoAction)
+
+
+        run(self)
+
+        Class variables
+
+            description = _('information about a repository')
+
+            select_by_env = True
+
+        Inherited methods
+            katello.client.core.repo.RepoAction.__init__(self)
+            katello.client.core.repo.SingleRepoAction.check_options(self)
+            katello.client.core.repo.SingleRepoAction.check_repo_select_options(self)
+            katello.client.core.repo.RepoAction.get_repo(self)
+            katello.client.core.repo.SingleRepoAction.set_repo_select_options(self, select_by_env=True)
+            katello.client.core.repo.SingleRepoAction.setup_parser(self)
+
+    class Sync(SingleRepoAction)
+
+
+        run(self)
+
+        Class variables
+
+            description = _('synchronize a repository')
+
+            select_by_env = False
+
+        Inherited methods
+            katello.client.core.repo.RepoAction.__init__(self)
+            katello.client.core.repo.SingleRepoAction.check_options(self)
+            katello.client.core.repo.SingleRepoAction.check_repo_select_options(self)
+            katello.client.core.repo.RepoAction.get_repo(self)
+            katello.client.core.repo.SingleRepoAction.set_repo_select_options(self, select_by_env=True)
+            katello.client.core.repo.SingleRepoAction.setup_parser(self)
+
+    class CancelSync(SingleRepoAction)
+
+
+        run(self)
+
+        Class variables
+
+            description = _('cancel currently running synchronization of...
+
+            select_by_env = False
+
+        Inherited methods
+            katello.client.core.repo.RepoAction.__init__(self)
+            katello.client.core.repo.SingleRepoAction.check_options(self)
+            katello.client.core.repo.SingleRepoAction.check_repo_select_options(self)
+            katello.client.core.repo.RepoAction.get_repo(self)
+            katello.client.core.repo.SingleRepoAction.set_repo_select_options(self, select_by_env=True)
+            katello.client.core.repo.SingleRepoAction.setup_parser(self)
+
+    class Enable(SingleRepoAction)
+
+
+        description(self)
+
+        __init__(self, enable=True)
+
+        run(self)
+
+        Class variables
+
+            select_by_env = False
+
+        Inherited methods
+            katello.client.core.repo.SingleRepoAction.check_options(self)
+            katello.client.core.repo.SingleRepoAction.check_repo_select_options(self)
+            katello.client.core.repo.RepoAction.get_repo(self)
+            katello.client.core.repo.SingleRepoAction.set_repo_select_options(self, select_by_env=True)
+            katello.client.core.repo.SingleRepoAction.setup_parser(self)
+
+    class List(RepoAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('list repos within an organization')
+
+        Inherited methods
+            katello.client.core.repo.RepoAction.__init__(self)
+            katello.client.core.repo.RepoAction.get_repo(self)
+
+    class Delete(SingleRepoAction)
+
+
+        run(self)
+
+        Class variables
+
+            description = _('delete a repository')
+
+            select_by_env = True
+
+        Inherited methods
+            katello.client.core.repo.RepoAction.__init__(self)
+            katello.client.core.repo.SingleRepoAction.check_options(self)
+            katello.client.core.repo.SingleRepoAction.check_repo_select_options(self)
+            katello.client.core.repo.RepoAction.get_repo(self)
+            katello.client.core.repo.SingleRepoAction.set_repo_select_options(self, select_by_env=True)
+            katello.client.core.repo.SingleRepoAction.setup_parser(self)
+
+    class Repo(katello.client.core.base.Command)
+
+        Class variables
+
+            description = _('repo specific actions in the katello server')
+
+FUNCTIONS
+
+    format_sync_time(sync_time)
+
+    format_sync_state(state)
+
+VARIABLES
+
+    SYNC_STATES = {'waiting': _("Waiting"), 'running': _("Running"), 'er...

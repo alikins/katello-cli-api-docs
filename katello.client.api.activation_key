@@ -1,0 +1,24 @@
+MODULE NAME
+    katello.client.api.activation_key
+
+
+CLASSES
+
+    class ActivationKeyAPI(katello.client.api.base.KatelloAPI)
+
+
+        activation_keys_by_organization(self, orgId, keyName=None)
+
+        activation_keys_by_environment(self, envId)
+
+        activation_key(self, keyId)
+
+        create(self, envId, name, description, templateId=None)
+
+        update(self, keyId, environmentId, name, description, templateId)
+
+        add_pool(self, keyId, poolid)
+
+        remove_pool(self, keyId, poolid)
+
+        delete(self, keyId)

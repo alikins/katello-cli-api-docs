@@ -1,0 +1,107 @@
+MODULE NAME
+    katello.client.core.activation_key
+
+
+CLASSES
+
+    class ActivationKeyAction(katello.client.core.base.Action)
+
+
+        __init__(self)
+
+        get_template_id(self, environmentId, templateName)
+
+    class List(ActivationKeyAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        get_keys_for_organization(self, orgName)
+
+        get_keys_for_environment(self, orgName, envName)
+
+        Class variables
+
+            description = _('list all activation keys')
+
+        Inherited methods
+            katello.client.core.activation_key.ActivationKeyAction.__init__(self)
+            katello.client.core.activation_key.ActivationKeyAction.get_template_id(self, environmentId, templateName)
+
+    class Info(ActivationKeyAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('show information about an activation key')
+
+        Inherited methods
+            katello.client.core.activation_key.ActivationKeyAction.__init__(self)
+            katello.client.core.activation_key.ActivationKeyAction.get_template_id(self, environmentId, templateName)
+
+    class Create(ActivationKeyAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('create an activation key')
+
+        Inherited methods
+            katello.client.core.activation_key.ActivationKeyAction.__init__(self)
+            katello.client.core.activation_key.ActivationKeyAction.get_template_id(self, environmentId, templateName)
+
+    class Update(ActivationKeyAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('update an activation key')
+
+        Inherited methods
+            katello.client.core.activation_key.ActivationKeyAction.__init__(self)
+            katello.client.core.activation_key.ActivationKeyAction.get_template_id(self, environmentId, templateName)
+
+    class Delete(ActivationKeyAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('delete an activation key')
+
+        Inherited methods
+            katello.client.core.activation_key.ActivationKeyAction.__init__(self)
+            katello.client.core.activation_key.ActivationKeyAction.get_template_id(self, environmentId, templateName)
+
+    class ActivationKey(katello.client.core.base.Command)
+
+        Class variables
+
+            description = _('activation key specific actions in the kate...

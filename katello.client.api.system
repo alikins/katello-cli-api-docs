@@ -1,0 +1,19 @@
+MODULE NAME
+    katello.client.api.system
+
+
+CLASSES
+
+    class SystemAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access environment calls
+
+
+        register(self, name, org, envName, cp_type)
+
+        unregister(self, system_id)
+
+        system(self, system_id)
+
+        systems_by_org(self, orgId, query={})
+
+        systems_by_env(self, orgId, envName, query={})

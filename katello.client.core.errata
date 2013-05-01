@@ -1,0 +1,64 @@
+MODULE NAME
+    katello.client.core.errata
+
+
+CLASSES
+
+    class ErrataAction(katello.client.core.base.Action)
+
+
+        __init__(self)
+
+    class List(ErrataAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('list all errata for a repo')
+
+        Inherited methods
+            katello.client.core.errata.ErrataAction.__init__(self)
+
+    class SystemErrata(ErrataAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _("list errata for a system")
+
+        Inherited methods
+            katello.client.core.errata.ErrataAction.__init__(self)
+
+    class Info(ErrataAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('information about an errata')
+
+        Inherited methods
+            katello.client.core.errata.ErrataAction.__init__(self)
+
+    class Errata(katello.client.core.base.Command)
+
+        Class variables
+
+            description = _('errata specific actions in the katello serv...

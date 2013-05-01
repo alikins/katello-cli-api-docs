@@ -1,0 +1,7 @@
+MODULE NAME
+    katello.client.cli.admin
+
+
+CLASSES
+
+    class AdminCLI(katello.client.cli.base.KatelloCLI)

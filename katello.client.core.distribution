@@ -1,0 +1,48 @@
+MODULE NAME
+    katello.client.core.distribution
+
+
+CLASSES
+
+    class DistributionAction(katello.client.core.base.Action)
+
+
+        __init__(self)
+
+    class List(DistributionAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('list distributions in a repository')
+
+        Inherited methods
+            katello.client.core.distribution.DistributionAction.__init__(self)
+
+    class Info(DistributionAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('list information about a distribution')
+
+        Inherited methods
+            katello.client.core.distribution.DistributionAction.__init__(self)
+
+    class Distribution(katello.client.core.base.Command)
+
+        Class variables
+
+            description = _('repo specific actions in the katello server')

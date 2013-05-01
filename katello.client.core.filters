@@ -1,0 +1,116 @@
+MODULE NAME
+    katello.client.core.filters
+
+
+CLASSES
+
+    class FilterAction(katello.client.core.base.Action)
+
+
+        __init__(self)
+
+    class List(FilterAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('list all filters')
+
+        Inherited methods
+            katello.client.core.filters.FilterAction.__init__(self)
+
+    class Create(FilterAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        parse_packages(self, packages)
+
+        Class variables
+
+            description = _('create a filter')
+
+        Inherited methods
+            katello.client.core.filters.FilterAction.__init__(self)
+
+    class Delete(FilterAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('delete a filter')
+
+        Inherited methods
+            katello.client.core.filters.FilterAction.__init__(self)
+
+    class Info(FilterAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        package_list_as_string(self, package_list)
+
+        Class variables
+
+            description = _('filter info')
+
+        Inherited methods
+            katello.client.core.filters.FilterAction.__init__(self)
+
+    class AddPackage(FilterAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('Add a package to filter')
+
+        Inherited methods
+            katello.client.core.filters.FilterAction.__init__(self)
+
+    class RemovePackage(FilterAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('Remove a package from filter')
+
+        Inherited methods
+            katello.client.core.filters.FilterAction.__init__(self)
+
+    class Filter(katello.client.core.base.Command)
+
+        Class variables
+
+            description = _('filter specific actions in the katello serv...

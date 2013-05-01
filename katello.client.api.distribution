@@ -1,0 +1,13 @@
+MODULE NAME
+    katello.client.api.distribution
+
+
+CLASSES
+
+    class DistributionAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access distributions
+
+
+        distributions_by_repo(self, repoId)
+
+        distribution(self, distribution_id)

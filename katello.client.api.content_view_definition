@@ -1,0 +1,38 @@
+MODULE NAME
+    katello.client.api.content_view_definition
+
+
+CLASSES
+
+    class ContentViewDefinitionAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access content_view calls
+
+
+        content_view_definitions_by_org(self, org_id)
+
+        cvd_by_label_or_name_or_id(self, org_id, label=None, name=None,
+                                   cvd_id=None)
+
+        show(self, org_id, cvd_id)
+
+        create(self, org_id, name, label, description, composite=False)
+
+        update(self, org, cvd_id, name, description)
+
+        delete(self, cvd_id)
+
+        publish(self, org_id, cvd_id, name, label=None, description=None)
+
+        clone(self, org, cvd_id, name, label=None, description=None)
+
+        products(self, org, cvd_id)
+
+        update_products(self, org, cvd, products)
+
+        repos(self, org, cvd_id)
+
+        update_repos(self, org, cvd, repos)
+
+        content_views(self, cvd_id)
+
+        update_content_views(self, cvd_id, views)

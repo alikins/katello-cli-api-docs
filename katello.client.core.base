@@ -1,0 +1,184 @@
+MODULE NAME
+    katello.client.core.base
+
+
+CLASSES
+
+    class Command(object)
+        Command class representing a katello cli command
+
+
+        __init__(self)
+            x.__init__(...) initializes x; see x.__class__.__doc__ for
+            signature
+
+        usage(self)
+            Return a string showing the command's usage
+
+        __build_action_usage_lines(self, action)
+
+        description(self)
+            Return a string showing the command's description
+
+        add_action(self, name, action)
+            Add an action to this command
+
+        action_names(self)
+
+        get_action(self, name)
+
+        process_options(self, args)
+
+        extract_action(self, args)
+
+        main(self, args)
+            Main execution of a katello cli command This method parses
+            options sent to the command itself, looks up the corresponding
+            action, and calls that action's main()
+
+        Instance variables
+
+            cert_file
+                certificate file credential
+
+            key_file
+                private key file credential
+
+            name
+                command's name
+
+            parser
+                optparse.OptionParser instance
+
+            password
+                password credential
+
+            username
+                username credential
+
+        Inherited methods
+
+    class Action(object)
+        Action class representing a single action for a cli command
+
+
+        __init__(self)
+            x.__init__(...) initializes x; see x.__class__.__doc__ for
+            signature
+
+        usage(self)
+            Return a string for this action's usage
+
+        description(self)
+            Return a string for this action's description
+
+        get_option(self, opt)
+            Get an option from opts or from the config file Options from
+            opts take precedence.
+            Returns:
+                value of the option or None if the option is no present
+
+        has_option(self, opt)
+            Check if option is present
+
+        require_option(self, opt_dest)
+            Add option error if an option is not present.
+
+        option_specified(self, opt)
+
+        add_option_error(self, errorMsg)
+            Add option error to the error stack
+
+        setup_parser(self)
+            Add custom options to the parser
+
+        add_scheduled_time_option(self)
+            Adds a --when scheduled time option to the option parser
+
+        parse_scheduled_time_option(self)
+
+        run(self)
+            Action's functionality
+
+        check_options(self)
+            Add custom option requirements
+
+        output_mode(self)
+
+        process_options(self, args)
+            This method setups up the parser, parses the arguments, checks
+            options and prints argument errors.
+
+        extract_action(self, args)
+
+        require_credentials(self)
+            if True, credentials are required when calling the command.
+
+        error(self, errorMsg)
+
+        main(self, args)
+            Main execution of the action This method setups up the parser,
+            parses the arguments, and calls run() in a try/except block,
+            handling RestlibExceptions and general errors
+
+        Instance variables
+
+            args
+                arguments returned from parsing command line
+
+            name
+                action's name
+
+            opts
+                options returned from parsing command line
+
+            parser
+                optparse.OptionParser instance
+
+        Inherited methods
+
+    class KatelloOption(optparse.Option)
+
+        Class variables
+
+            TYPES = Option.TYPES+("bool",)
+
+            TYPE_CHECKER = copy(Option.TYPE_CHECKER)
+
+        Inherited methods
+            optparse.Option.__init__(self, *opts, **attrs)
+            optparse.Option.__repr__(self)
+            optparse.Option.__str__(self)
+            optparse.Option._check_action(self)
+            optparse.Option._check_callback(self)
+            optparse.Option._check_choice(self)
+            optparse.Option._check_const(self)
+            optparse.Option._check_dest(self)
+            optparse.Option._check_nargs(self)
+            optparse.Option._check_opt_strings(self, opts)
+            optparse.Option._check_type(self)
+            optparse.Option._set_attrs(self, attrs)
+            optparse.Option._set_opt_strings(self, opts)
+            optparse.Option.check_value(self, opt, value)
+            optparse.Option.convert_value(self, opt, value)
+            optparse.Option.get_opt_string(self)
+            optparse.Option.process(self, opt, value, values, parser)
+            optparse.Option.take_action(self, action, dest, opt, value, values, parser)
+            optparse.Option.takes_value(self)
+
+        Inherited class variables
+            optparse.Option.ACTIONS = "store", "store_const", "store_true", "store_false", "...
+            optparse.Option.ALWAYS_TYPED_ACTIONS = "store", "append"
+            optparse.Option.ATTRS = ['action', 'type', 'dest', 'default', 'nargs', 'const'...
+            optparse.Option.CHECK_METHODS = [_check_action, _check_type, _check_choice, _check_des...
+            optparse.Option.CONST_ACTIONS = "store_const", "append_const"
+            optparse.Option.STORE_ACTIONS = "store", "store_const", "store_true", "store_false", "...
+            optparse.Option.TYPED_ACTIONS = "store", "append", "callback"
+
+FUNCTIONS
+
+    check_bool(option, opt, value)
+
+VARIABLES
+
+    _log = getLogger(__name__)

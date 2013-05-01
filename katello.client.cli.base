@@ -1,0 +1,94 @@
+MODULE NAME
+    katello.client.cli.base
+
+
+CLASSES
+
+    class OptionException(exceptions.Exception)
+        Exception to be used, when value of an option is not valid e.g. not
+        found
+
+        Inherited methods
+            exceptions.BaseException.__delattr__(...)
+            exceptions.BaseException.__getattribute__(...)
+            exceptions.BaseException.__getitem__(x, y)
+            exceptions.BaseException.__getslice__(x, i, j)
+            exceptions.Exception.__init__(...)
+            exceptions.Exception.__new__(T, S, *...)
+            exceptions.BaseException.__reduce__(...)
+            exceptions.BaseException.__repr__(x)
+            exceptions.BaseException.__setattr__(...)
+            exceptions.BaseException.__setstate__(...)
+            exceptions.BaseException.__str__(x)
+            exceptions.BaseException.__unicode__(...)
+
+    class KatelloError(exceptions.Exception)
+        User-friendly exception wrapper (used for stderr output).
+
+
+        __init__(self, message, exception)
+            x.__init__(...) initializes x; see x.__class__.__doc__ for
+            signature
+
+        __str__(self)
+            str(x)
+
+        Inherited methods
+            exceptions.BaseException.__delattr__(...)
+            exceptions.BaseException.__getattribute__(...)
+            exceptions.BaseException.__getitem__(x, y)
+            exceptions.BaseException.__getslice__(x, i, j)
+            exceptions.Exception.__new__(T, S, *...)
+            exceptions.BaseException.__reduce__(...)
+            exceptions.BaseException.__repr__(x)
+            exceptions.BaseException.__setattr__(...)
+            exceptions.BaseException.__setstate__(...)
+            exceptions.BaseException.__unicode__(...)
+
+    class KatelloCLI(object)
+        Katello command line tool class.
+
+
+        __init__(self)
+            x.__init__(...) initializes x; see x.__class__.__doc__ for
+            signature
+
+        usage(self)
+            Usage string.
+            Returns:
+                command's usage string
+            Return type:
+                str
+
+        __build_command_usage_lines(self, command)
+
+        add_command(self, name, command)
+            Add a command to this command line tool
+
+        remove_command(self, name)
+
+        setup_parser(self)
+            Add options to the command line parser.
+
+        setup_server(self)
+            Setup the active server connection.
+
+        setup_credentials(self)
+            Setup up request credentials with the active server.
+
+        error(self, exception, errorMsg=None)
+
+        command_names(self)
+
+        get_command(self, name)
+
+        extract_command(self, args)
+
+        main(self, args=sys.argv [1:])
+            Run this command.
+
+        Inherited methods
+
+VARIABLES
+
+    _log = getLogger(__name__)

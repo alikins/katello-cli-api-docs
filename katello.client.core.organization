@@ -1,0 +1,131 @@
+MODULE NAME
+    katello.client.core.organization
+
+
+CLASSES
+
+    class OrganizationAction(katello.client.core.base.Action)
+
+
+        __init__(self)
+
+    class List(OrganizationAction)
+
+
+        run(self)
+
+        Class variables
+
+            description = _('list all known organizations')
+
+        Inherited methods
+            katello.client.core.organization.OrganizationAction.__init__(self)
+
+    class Create(OrganizationAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('create an organization')
+
+        Inherited methods
+            katello.client.core.organization.OrganizationAction.__init__(self)
+
+    class Info(OrganizationAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('list information about an organization')
+
+        Inherited methods
+            katello.client.core.organization.OrganizationAction.__init__(self)
+
+    class Delete(OrganizationAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('delete an organization')
+
+        Inherited methods
+            katello.client.core.organization.OrganizationAction.__init__(self)
+
+    class Update(OrganizationAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('update an organization')
+
+        Inherited methods
+            katello.client.core.organization.OrganizationAction.__init__(self)
+
+    class GenerateDebugCert(OrganizationAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        Class variables
+
+            description = _('generate and show ueber certificate')
+
+        Inherited methods
+            katello.client.core.organization.OrganizationAction.__init__(self)
+
+    class ShowSubscriptions(OrganizationAction)
+
+
+        __init__(self)
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        sla(self, pool)
+
+        convert_timestamp(self, timestamp_field)
+
+        extract_sla_from_product(self, p)
+
+        displayable_pool(self, pool)
+
+        Class variables
+
+            description = _('show subscriptions')
+
+    class Organization(katello.client.core.base.Command)
+
+        Class variables
+
+            description = _('organization specific actions in the katell...

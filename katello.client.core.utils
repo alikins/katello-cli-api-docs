@@ -1,0 +1,210 @@
+MODULE NAME
+    katello.client.core.utils
+
+
+CLASSES
+
+    class Printer
+        Class for unified printing of the CLI output.
+
+
+        __init__(self, output_mode, delimiter="")
+
+        setHeader(self, heading)
+
+        setOutputMode(self, output_mode)
+
+        _printDivLine(self, width)
+
+        _printHeader(self, heading, grep_mode, widths={})
+            Print a fancy header to stdout.
+
+        _getTermWidth(self)
+
+        _attrToName(self, attr_name)
+            Convert attribute name to display name. oraganization_id ->
+            Organization Id
+
+        addColumn(self, attr_name, name=None, multiline=False,
+                  show_in_grep=True, time_format=False, value='')
+            Add column to display
+
+        _printItem(self, item, indent="")
+            Print item from a list on number of lines
+
+        _printItemGrep(self, item, widths={})
+            Print item of a list on single line in grep mode
+
+        _calculateGrepWidths(self, items)
+
+        u_str(self, value)
+            Casts value to string unless it's unicode. There is a problem
+            using str on unicode values.
+
+        _minColumnWidth(self)
+
+        _getRandomNumber(self)
+
+        printItem(self, item, indent="")
+            Print one data item
+
+        printItems(self, items, indent="")
+            Print collection of data items
+
+        Class variables
+
+            OUTPUT_FORCE_NONE = 0
+
+            OUTPUT_FORCE_GREP = 1
+
+            OUTPUT_FORCE_VERBOSE = 2
+
+    class SystemExitRequest(exceptions.Exception)
+        Exception to indicate a system exit request. Introduced to The
+        arguments are [0] the response status as an integer and [1] a list
+        of error messages.
+
+        Inherited methods
+            exceptions.BaseException.__delattr__(...)
+            exceptions.BaseException.__getattribute__(...)
+            exceptions.BaseException.__getitem__(x, y)
+            exceptions.BaseException.__getslice__(x, i, j)
+            exceptions.Exception.__init__(...)
+            exceptions.Exception.__new__(T, S, *...)
+            exceptions.BaseException.__reduce__(...)
+            exceptions.BaseException.__repr__(x)
+            exceptions.BaseException.__setattr__(...)
+            exceptions.BaseException.__setstate__(...)
+            exceptions.BaseException.__str__(x)
+            exceptions.BaseException.__unicode__(...)
+
+    class Spinner(threading.Thread)
+        Spinner shows nice cli "spinner" while function is executing.
+
+        Each spinner instance can be started only once. Typical usage:
+
+        s = Spinner() s.start() ... s.stop() s.join()
+
+
+        __init__(self, msg="")
+            x.__init__(...) initializes x; see x.__class__.__doc__ for
+            signature
+
+        _putMessage(self)
+
+        _eraseMessage(self)
+
+        _putChar(self, char)
+
+        _resetCaret(self)
+
+        _eraseSpinner(self)
+
+        run(self)
+
+        stop(self)
+
+        Inherited methods
+            threading.Thread.__repr__(self)
+            threading._Verbose._note(self, *args)
+            threading.Thread._set_daemon(self)
+            threading.Thread._set_ident(self)
+            threading.Thread.daemon(self, daemonic)
+            threading.Thread.getName(self)
+            threading.Thread.ident(self)
+            threading.Thread.isAlive(self)
+            threading.Thread.isDaemon(self)
+            threading.Thread.is_alive(self)
+            threading.Thread.join(self, timeout=None)
+            threading.Thread.name(self, name)
+            threading.Thread.setDaemon(self, daemonic)
+            threading.Thread.setName(self, name)
+            threading.Thread.start(self)
+
+    class ProgressBar
+
+
+        updateProgress(self, progress)
+
+        done(self)
+
+    class AsyncTask
+
+
+        __init__(self, task)
+
+        update(self)
+
+        get_progress(self)
+
+        is_running(self)
+
+        finished(self)
+
+        failed(self)
+
+        succeeded(self)
+
+        subtask_count(self)
+
+        total_size(self)
+
+        total_count(self)
+
+        size_left(self)
+
+        items_left(self)
+
+        errors(self)
+
+        _get_progress_sum(self, name)
+
+        is_multiple(self)
+
+        get_hashes(self)
+
+        get_subtasks(self)
+
+        Class variables
+
+            _tasks = []
+
+FUNCTIONS
+
+    is_valid_record(rec)
+        Checks if record returned from server has been saved.
+
+    indent_text(text, indent="\t")
+
+    text_to_line(text, glue=" ")
+
+    system_exit(code, msgs=None)
+        Raise a system exit request exception with a return code and
+        optional message(s). Saves a few lines of code. Exception is
+        handled in command's main method. This allows not to exit the cli
+        but only skip out of the command when running in shell mode.
+
+    parse_tokens(tokenstring)
+        Parse string as if it was command line parameters.
+
+    get_abs_path(path)
+        Return absolute path with .. and ~ resolved
+
+    format_date(date, from_format="%Y-%m-%dT%H:%M:%SZ",
+                to_format="%Y/%m/%d %H:%M:%S")
+        Format standard rails timestamp to more human readable format
+
+    run_spinner_in_bg(function, arguments=(), message="")
+        Run spinner while a function is running.
+
+    wait_for_async_task(task)
+
+    run_async_task_with_status(task, progressBar)
+
+    progress(left, total)
+
+    convert_to_mime_type(type, default=None)
+
+    attachment_file_name(headers, default)
+
+    save_report(report, filename)

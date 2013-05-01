@@ -1,0 +1,35 @@
+MODULE NAME
+    conf
+
+
+VARIABLES
+
+    extensions = ['sphinx.ext.autodoc']
+
+    templates_path = ['_templates']
+
+    source_suffix = '.rst'
+
+    master_doc = 'index'
+
+    project = u'Katello CLI'
+
+    copyright = u'Red Hat, Inc.'
+
+    version = ''
+
+    release = ''
+
+    exclude_patterns = []
+
+    pygments_style = 'sphinx'
+
+    html_theme = 'default'
+
+    html_static_path = ['_static']
+
+    htmlhelp_basename = 'KatelloCLIdoc'
+
+    latex_documents = [('index', 'KatelloCLI.tex', u'Katello CLI Documen...
+
+    man_pages = [('index', 'katellocli', u'Katello CLI Documentation', [...

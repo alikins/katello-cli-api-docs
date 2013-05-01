@@ -1,0 +1,26 @@
+MODULE NAME
+    katello.client.api.content_view
+
+
+CLASSES
+
+    class ContentViewAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access content_view calls
+
+
+        content_views_by_org(self, org_id, env=None)
+
+        views_by_label_name_or_id(self, org_id, label=None, name=None,
+                                  vid=None)
+
+        show(self, org_name, view_id, environment_id=None)
+
+        content_view_by_label(self, org_id, view_label)
+
+        update(self, org_id, cv_id, label, description)
+
+        delete(self, org_id, cv_id)
+
+        promote(self, cv_id, env_id)
+
+        refresh(self, cv_id)

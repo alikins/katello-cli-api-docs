@@ -1,0 +1,19 @@
+MODULE NAME
+    katello.client.api.organization
+
+
+CLASSES
+
+    class OrganizationAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access Organization Data
+
+
+        create(self, name, description)
+
+        delete(self, name)
+
+        update(self, name, description)
+
+        organizations(self)
+
+        organization(self, name)

@@ -1,0 +1,159 @@
+MODULE NAME
+    product_list_test
+
+
+CLASSES
+
+    class RequiredCLIOptionsTests(cli_test_utils.CLIOptionTestCase)
+
+
+        setUp(self)
+            Hook method for setting up the test fixture before exercising
+            it.
+
+        test_missing_org_generates_error(self)
+
+        test_no_error_if_org_provided(self)
+
+        test_no_error_if_org_and_env_provided(self)
+
+        test_no_error_if_org_and_provider_provided(self)
+
+        Inherited methods
+            unittest.TestCase.__call__(self, *args, **kwds)
+            unittest.TestCase.__eq__(self, other)
+            unittest.TestCase.__hash__(self)
+            unittest.TestCase.__init__(self, methodName='runTest')
+            unittest.TestCase.__ne__(self, other)
+            unittest.TestCase.__repr__(self)
+            unittest.TestCase.__str__(self)
+            unittest.TestCase._exc_info(self)
+            unittest.TestCase.assertAlmostEqual(self, first, second, places=7, msg=None)
+            unittest.TestCase.assertAlmostEquals(self, first, second, places=7, msg=None)
+            unittest.TestCase.assertEqual(self, first, second, msg=None)
+            unittest.TestCase.assertEquals(self, first, second, msg=None)
+            unittest.TestCase.assertFalse(self, expr, msg=None)
+            unittest.TestCase.assertNotAlmostEqual(self, first, second, places=7, msg=None)
+            unittest.TestCase.assertNotAlmostEquals(self, first, second, places=7, msg=None)
+            unittest.TestCase.assertNotEqual(self, first, second, msg=None)
+            unittest.TestCase.assertNotEquals(self, first, second, msg=None)
+            unittest.TestCase.assertRaises(self, excClass, callableObj, *args, **kwargs)
+            unittest.TestCase.assertTrue(self, expr, msg=None)
+            unittest.TestCase.assert_(self, expr, msg=None)
+            unittest.TestCase.countTestCases(self)
+            unittest.TestCase.debug(self)
+            unittest.TestCase.defaultTestResult(self)
+            unittest.TestCase.fail(self, msg=None)
+            unittest.TestCase.failIf(self, expr, msg=None)
+            unittest.TestCase.failIfAlmostEqual(self, first, second, places=7, msg=None)
+            unittest.TestCase.failIfEqual(self, first, second, msg=None)
+            unittest.TestCase.failUnless(self, expr, msg=None)
+            unittest.TestCase.failUnlessAlmostEqual(self, first, second, places=7, msg=None)
+            unittest.TestCase.failUnlessEqual(self, first, second, msg=None)
+            unittest.TestCase.failUnlessRaises(self, excClass, callableObj, *args, **kwargs)
+            unittest.TestCase.id(self)
+            cli_test_utils.CLITestCase.mock(self, obj, property_name, return_value=None)
+            cli_test_utils.CLITestCase.mock_from_module(self, property_name, return_value=None)
+            cli_test_utils.CLIOptionTestCase.mock_options(self)
+            cli_test_utils.CLIOptionTestCase.mocked_get_option(self, opt, default=None)
+            cli_test_utils.CLITestCase.restore_mocks(self)
+            unittest.TestCase.run(self, result=None)
+            cli_test_utils.CLITestCase.set_action(self, action)
+            cli_test_utils.CLITestCase.set_module(self, module)
+            unittest.TestCase.shortDescription(self)
+            cli_test_utils.CLITestCase.tearDown(self)
+
+        Inherited class variables
+            cli_test_utils.CLITestCase._mocked_props = {}
+            cli_test_utils.CLITestCase.action = None
+            cli_test_utils.CLITestCase.module = None
+
+        Inherited nested classes
+            class unittest.TestCase.failureException(StandardError)
+
+    class ProductListTest(cli_test_utils.CLIActionTestCase)
+
+
+        setUp(self)
+            Hook method for setting up the test fixture before exercising
+            it.
+
+        tearDown(self)
+            Hook method for deconstructing the test fixture after testing
+            it.
+
+        test_it_finds_environment(self)
+
+        test_it_finds_products_by_environment(self)
+
+        test_it_finds_provider(self)
+
+        test_it_finds_products_by_provider(self)
+
+        test_it_prints_products(self)
+
+        Class variables
+
+            ORG = test_data.ORGS [0]
+
+            ENV = test_data.ENVS [0]
+
+            PROV = test_data.PROVIDERS [2]
+
+            OPTIONS_BY_ENV = {'org': ORG ['name'], 'env': ENV ['name']}
+
+            OPTIONS_BY_PROVIDER = {'org': ORG ['name'], 'prov': PROV ['n...
+
+        Inherited methods
+            unittest.TestCase.__call__(self, *args, **kwds)
+            unittest.TestCase.__eq__(self, other)
+            unittest.TestCase.__hash__(self)
+            unittest.TestCase.__init__(self, methodName='runTest')
+            unittest.TestCase.__ne__(self, other)
+            unittest.TestCase.__repr__(self)
+            unittest.TestCase.__str__(self)
+            unittest.TestCase._exc_info(self)
+            unittest.TestCase.assertAlmostEqual(self, first, second, places=7, msg=None)
+            unittest.TestCase.assertAlmostEquals(self, first, second, places=7, msg=None)
+            unittest.TestCase.assertEqual(self, first, second, msg=None)
+            unittest.TestCase.assertEquals(self, first, second, msg=None)
+            unittest.TestCase.assertFalse(self, expr, msg=None)
+            unittest.TestCase.assertNotAlmostEqual(self, first, second, places=7, msg=None)
+            unittest.TestCase.assertNotAlmostEquals(self, first, second, places=7, msg=None)
+            unittest.TestCase.assertNotEqual(self, first, second, msg=None)
+            unittest.TestCase.assertNotEquals(self, first, second, msg=None)
+            unittest.TestCase.assertRaises(self, excClass, callableObj, *args, **kwargs)
+            unittest.TestCase.assertTrue(self, expr, msg=None)
+            unittest.TestCase.assert_(self, expr, msg=None)
+            unittest.TestCase.countTestCases(self)
+            unittest.TestCase.debug(self)
+            unittest.TestCase.defaultTestResult(self)
+            unittest.TestCase.fail(self, msg=None)
+            unittest.TestCase.failIf(self, expr, msg=None)
+            unittest.TestCase.failIfAlmostEqual(self, first, second, places=7, msg=None)
+            unittest.TestCase.failIfEqual(self, first, second, msg=None)
+            unittest.TestCase.failUnless(self, expr, msg=None)
+            unittest.TestCase.failUnlessAlmostEqual(self, first, second, places=7, msg=None)
+            unittest.TestCase.failUnlessEqual(self, first, second, msg=None)
+            unittest.TestCase.failUnlessRaises(self, excClass, callableObj, *args, **kwargs)
+            unittest.TestCase.id(self)
+            cli_test_utils.CLITestCase.mock(self, obj, property_name, return_value=None)
+            cli_test_utils.CLITestCase.mock_from_module(self, property_name, return_value=None)
+            cli_test_utils.CLIActionTestCase.mock_options(self, options)
+            cli_test_utils.CLIActionTestCase.mock_printer(self)
+            cli_test_utils.CLIActionTestCase.mock_spinner(self)
+            cli_test_utils.CLIActionTestCase.mocked_get_option(self, opt, default=None)
+            cli_test_utils.CLITestCase.restore_mocks(self)
+            unittest.TestCase.run(self, result=None)
+            cli_test_utils.CLITestCase.set_action(self, action)
+            cli_test_utils.CLITestCase.set_module(self, module)
+            unittest.TestCase.shortDescription(self)
+
+        Inherited class variables
+            cli_test_utils.CLITestCase._mocked_props = {}
+            cli_test_utils.CLIActionTestCase._options = {}
+            cli_test_utils.CLITestCase.action = None
+            cli_test_utils.CLITestCase.module = None
+
+        Inherited nested classes
+            class unittest.TestCase.failureException(StandardError)

@@ -1,0 +1,285 @@
+MODULE NAME
+    katello.client.server
+
+
+CLASSES
+
+    class ServerRequestError(exceptions.Exception)
+        Exception to indicate a less than favorable response from the
+        server. The arguments are [0] the response status as an integer and
+        [1] the response message as a dict, if we managed to decode from
+        json, or a str if we didn't [2] potentially a traceback, if the
+        server response was a python error, otherwise it will be None
+
+        Inherited methods
+            exceptions.BaseException.__delattr__(...)
+            exceptions.BaseException.__getattribute__(...)
+            exceptions.BaseException.__getitem__(x, y)
+            exceptions.BaseException.__getslice__(x, i, j)
+            exceptions.Exception.__init__(...)
+            exceptions.Exception.__new__(T, S, *...)
+            exceptions.BaseException.__reduce__(...)
+            exceptions.BaseException.__repr__(x)
+            exceptions.BaseException.__setattr__(...)
+            exceptions.BaseException.__setstate__(...)
+            exceptions.BaseException.__str__(x)
+            exceptions.BaseException.__unicode__(...)
+
+    class Bytes(str)
+        Binary (non-json) PUT/POST request body wrapper.
+
+        Inherited methods
+            str.__add__(x, y)
+            str.__contains__(x, y)
+            str.__eq__(x, y)
+            str.__format__(S, format_spec)
+            str.__ge__(x, y)
+            str.__getattribute__(...)
+            str.__getitem__(x, y)
+            str.__getnewargs__(...)
+            str.__getslice__(x, i, j)
+            str.__gt__(x, y)
+            str.__hash__(x)
+            str.__le__(x, y)
+            str.__len__(x)
+            str.__lt__(x, y)
+            str.__mod__(x, y)
+            str.__mul__(x, n)
+            str.__ne__(x, y)
+            str.__new__(T, S, *...)
+            str.__repr__(x)
+            str.__rmod__(x, y)
+            str.__rmul__(x, n)
+            str.__sizeof__(S)
+            str.__str__(x)
+            str._formatter_field_name_split(...)
+            str._formatter_parser(...)
+            str.capitalize(S)
+            str.center(S, width, fillchar=...)
+            str.count(S, sub, start=..., end=...)
+            str.decode(S, encoding=..., errors=...)
+            str.encode(S, encoding=..., errors=...)
+            str.endswith(S, suffix, start=..., end=...)
+            str.expandtabs(S, tabsize=...)
+            str.find(S, sub, start=... , end=...)
+            str.format(S, *args, **kwargs)
+            str.index(S, sub, start=... , end=...)
+            str.isalnum(S)
+            str.isalpha(S)
+            str.isdigit(S)
+            str.islower(S)
+            str.isspace(S)
+            str.istitle(S)
+            str.isupper(S)
+            str.join(S, iterable)
+            str.ljust(S, width, fillchar=...)
+            str.lower(S)
+            str.lstrip(S, chars=...)
+            str.partition(S, sep)
+            str.replace(S, old, new, count=...)
+            str.rfind(S, sub, start=... , end=...)
+            str.rindex(S, sub, start=... , end=...)
+            str.rjust(S, width, fillchar=...)
+            str.rpartition(S, sep)
+            str.rsplit(S, sep=... , maxsplit=...)
+            str.rstrip(S, chars=...)
+            str.split(S, sep=... , maxsplit=...)
+            str.splitlines(S, keepends=...)
+            str.startswith(S, prefix, start=..., end=...)
+            str.strip(S, chars=...)
+            str.swapcase(S)
+            str.title(S)
+            str.translate(S, table, deletechars=...)
+            str.upper(S)
+            str.zfill(S, width)
+
+    class Server(object)
+        Base server class.
+
+
+        __init__(self, host, port=80, protocol='http', path_prefix='')
+            x.__init__(...) initializes x; see x.__class__.__doc__ for
+            signature
+
+        set_basic_auth_credentials(self, username, password)
+            Set username and password credentials for http basic auth
+
+        set_ssl_credentials(self, certfile, keyfile)
+            Set ssl certificate and public key credentials
+
+        set_kerberos_auth(self)
+            Set kerberos authentication
+
+        has_credentials_set(self)
+
+        DELETE(self, path, body=None)
+            Send a DELETE request to the katello server.
+            Returns:
+                tuple of the http response status and the response body
+            Return type:
+                (int, dict or None or str)
+
+        GET(self, path, queries=())
+            Send a GET request to the katello server.
+            Returns:
+                tuple of the http response status and the response body
+            Return type:
+                (int, dict or None or str)
+
+        HEAD(self, path)
+            Send a HEAD request to the katello server.
+            Returns:
+                tuple of the http response status and the response body
+            Return type:
+                (int, dict or None or str)
+
+        POST(self, path, body=None, multipart=False)
+            Send a POST request to the katello server.
+            Returns:
+                tuple of the http response status and the response body
+            Return type:
+                (int, dict or None or str)
+
+        PUT(self, path, body, multipart=False)
+            Send a PUT request to the katello server.
+            Returns:
+                tuple of the http response status and the response body
+            Return type:
+                (int, dict or None or str)
+
+        Instance variables
+
+            headers
+                dictionary of http headers to send in requests
+
+            host
+                host name of the katello server
+
+            path_prefix
+                mount point of the katello api (/katello/api)
+
+            port
+                port the katello server is listening on (443)
+
+            protocol
+                protocol the katello server is using (http, https)
+
+        Inherited methods
+
+    class KatelloServer(Server)
+        Katello server connection class.
+
+
+        __init__(self, host, port=443, protocol='https',
+                 path_prefix='/katello/api')
+            x.__init__(...) initializes x; see x.__class__.__doc__ for
+            signature
+
+        _http_connection(self)
+
+        _https_connection(self)
+
+        _connect(self)
+
+        _build_url(self, path, queries=())
+
+        _request(self, method, path, queries=(), body=None, multipart=False,
+                 customHeaders={})
+
+        _prepare_body(self, body, multipart)
+            Encode body according to needs as json or multipart
+            Returns:
+                tuple of the content type and the encoded body
+            Return type:
+                (string, string)
+
+        _process_response(self, response)
+            Try to parse the response
+            Returns:
+                tuple of the response status and response body
+            Return type:
+                (int, string)
+
+        _flatten_to_multipart(self, key, data)
+            Encode data recursively as if they were sent by http form
+            Returns:
+                list of tuples of the field name and field value
+            Return type:
+                [(string, string)]
+
+        _encode_multipart_formdata(self, data)
+            Encode data for httplib request
+            Returns:
+                tuple of the content type and encoded data
+            Return type:
+                (string, string)
+
+        _get_content_type(self, filename)
+            Guess content type from file name
+            Returns:
+                http content type
+            Return type:
+                string
+
+        set_basic_auth_credentials(self, username, password)
+            Set username and password credentials for http basic auth
+
+        set_ssl_credentials(self, certfile, keyfile)
+            Set ssl certificate and public key credentials
+
+        set_kerberos_auth(self)
+            Set kerberos authentication
+
+        has_credentials_set(self)
+
+        DELETE(self, path, body=None)
+            Send a DELETE request to the katello server.
+            Returns:
+                tuple of the http response status and the response body
+            Return type:
+                (int, dict or None or str)
+
+        GET(self, path, queries=(), customHeaders={})
+            Send a GET request to the katello server.
+            Returns:
+                tuple of the http response status and the response body
+            Return type:
+                (int, dict or None or str)
+
+        HEAD(self, path)
+            Send a HEAD request to the katello server.
+            Returns:
+                tuple of the http response status and the response body
+            Return type:
+                (int, dict or None or str)
+
+        POST(self, path, body=None, multipart=False, customHeaders={})
+            Send a POST request to the katello server.
+            Returns:
+                tuple of the http response status and the response body
+            Return type:
+                (int, dict or None or str)
+
+        PUT(self, path, body, multipart=False, customHeaders={})
+            Send a PUT request to the katello server.
+            Returns:
+                tuple of the http response status and the response body
+            Return type:
+                (int, dict or None or str)
+
+        Inherited methods
+
+        Inherited instance variables
+            katello.client.server.Server.headers
+            katello.client.server.Server.host
+            katello.client.server.Server.path_prefix
+            katello.client.server.Server.port
+            katello.client.server.Server.protocol
+
+FUNCTIONS
+
+    set_active_server(server)
+
+VARIABLES
+
+    active_server = None

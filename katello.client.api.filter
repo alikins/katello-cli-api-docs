@@ -1,0 +1,19 @@
+MODULE NAME
+    katello.client.api.filter
+
+
+CLASSES
+
+    class FilterAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access Filter Data
+
+
+        filters(self, org)
+
+        create(self, org, name, description, filter_list)
+
+        delete(self, org, name)
+
+        info(self, org, name)
+
+        update_packages(self, org, name, package_list)

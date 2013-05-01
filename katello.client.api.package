@@ -1,0 +1,13 @@
+MODULE NAME
+    katello.client.api.package
+
+
+CLASSES
+
+    class PackageAPI(katello.client.api.base.KatelloAPI)
+        Connection class to access package calls
+
+
+        package(self, packageId)
+
+        packages_by_repo(self, repoId)

@@ -1,0 +1,116 @@
+MODULE NAME
+    katello.client.i18n_optparse
+
+DESCRIPTION
+    Make optparse friendlier to i18n/l10n
+
+    Just use this instead of optparse, the interface should be the same.
+
+    For some backgorund, see: http://bugs.python.org/issue4319
+
+
+CLASSES
+
+    class OptionParserExitError(exceptions.Exception)
+        Exception to indicate exit call from OptionParser. Takes error code
+        as it's only argument.
+
+        Inherited methods
+            exceptions.BaseException.__delattr__(...)
+            exceptions.BaseException.__getattribute__(...)
+            exceptions.BaseException.__getitem__(x, y)
+            exceptions.BaseException.__getslice__(x, i, j)
+            exceptions.Exception.__init__(...)
+            exceptions.Exception.__new__(T, S, *...)
+            exceptions.BaseException.__reduce__(...)
+            exceptions.BaseException.__repr__(x)
+            exceptions.BaseException.__setattr__(...)
+            exceptions.BaseException.__setstate__(...)
+            exceptions.BaseException.__str__(x)
+            exceptions.BaseException.__unicode__(...)
+
+    class OptionParser(optparse.OptionParser)
+
+
+        print_help(self)
+            print_help(file : file = stdout)
+
+            Print an extended help message, listing all options and any
+            help text provided with them, to 'file' (default stdout).
+
+        exit(self, status=0, msg=None)
+            Overridden method for means of CLI. Doesn't exit the whole
+            script but raises OptionParserExitError
+
+        error(self, errorMsg)
+            Print usage, one or more error messages and call exit.
+
+        get_option_by_dest(self, dest)
+
+        get_options(self)
+
+        get_long_options(self)
+
+        get_short_options(self)
+
+        Class variables
+
+            displayed_help = False
+
+        Inherited methods
+            optparse.OptionParser.__init__(self, usage=None, option_list=None, option_class=Option,
+                version=None, conflict_handler="error", description=None,
+                formatter=None, add_help_option=True, prog=None,
+                epilog=None)
+            optparse.OptionParser._add_help_option(self)
+            optparse.OptionParser._add_version_option(self)
+            optparse.OptionContainer._check_conflict(self, option)
+            optparse.OptionParser._create_option_list(self)
+            optparse.OptionContainer._create_option_mappings(self)
+            optparse.OptionParser._get_all_options(self)
+            optparse.OptionParser._get_args(self, args)
+            optparse.OptionParser._get_encoding(self, file)
+            optparse.OptionParser._init_parsing_state(self)
+            optparse.OptionParser._match_long_opt(self, opt)
+            optparse.OptionParser._populate_option_list(self, option_list, add_help=True)
+            optparse.OptionParser._process_args(self, largs, rargs, values)
+            optparse.OptionParser._process_long_opt(self, rargs, values)
+            optparse.OptionParser._process_short_opts(self, rargs, values)
+            optparse.OptionContainer._share_option_mappings(self, parser)
+            optparse.OptionContainer.add_option(Option)
+            optparse.OptionParser.add_option_group(self, *args, **kwargs)
+            optparse.OptionContainer.add_options(self, option_list)
+            optparse.OptionParser.check_values(self, values, args)
+            optparse.OptionParser.destroy(self)
+            optparse.OptionParser.disable_interspersed_args(self)
+            optparse.OptionParser.enable_interspersed_args(self)
+            optparse.OptionParser.expand_prog_name(self, s)
+            optparse.OptionContainer.format_description(self, formatter)
+            optparse.OptionParser.format_epilog(self, formatter)
+            optparse.OptionParser.format_help(self, formatter=None)
+            optparse.OptionParser.format_option_help(self, formatter=None)
+            optparse.OptionParser.get_default_values(self)
+            optparse.OptionParser.get_description(self)
+            optparse.OptionContainer.get_option(self, opt_str)
+            optparse.OptionParser.get_option_group(self, opt_str)
+            optparse.OptionParser.get_prog_name(self)
+            optparse.OptionParser.get_usage(self)
+            optparse.OptionParser.get_version(self)
+            optparse.OptionContainer.has_option(self, opt_str)
+            optparse.OptionParser.parse_args(self, args=None, values=None)
+            optparse.OptionParser.print_usage(self, file=None)
+            optparse.OptionParser.print_version(self, file=None)
+            optparse.OptionContainer.remove_option(self, opt_str)
+            optparse.OptionContainer.set_conflict_handler(self, handler)
+            optparse.OptionParser.set_default(self, dest, value)
+            optparse.OptionParser.set_defaults(self, **kwargs)
+            optparse.OptionContainer.set_description(self, description)
+            optparse.OptionParser.set_process_default_values(self, process)
+            optparse.OptionParser.set_usage(self, usage)
+
+        Inherited class variables
+            optparse.OptionParser.standard_option_list = []
+
+VARIABLES
+
+    _ = gettext.gettext

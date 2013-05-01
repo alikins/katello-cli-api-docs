@@ -1,0 +1,20 @@
+MODULE NAME
+    usage
+
+
+CLASSES
+
+    class UsageGenerator
+
+
+        __init__(self)
+
+        collector(self)
+
+        _process_subcommands_for(self, cmd, parent_name)
+
+        print_usage(self, command="katello")
+
+        Class methods
+
+            _print_subcommands_for(cls, cmd)

@@ -1,0 +1,49 @@
+MODULE NAME
+    katello.client.core.ping
+
+
+CLASSES
+
+    class PingAction(katello.client.core.base.Action)
+
+
+        __init__(self)
+
+    class Status(PingAction)
+
+
+        setup_parser(self)
+
+        check_options(self)
+
+        run(self)
+
+        __returnCode(self, status)
+
+            Creates a return code according to returned statuses.
+            Error codes (combination by bitwise or):
+                candlepin:      2
+                candlepin_auth: 4
+                pulp:           8
+                pulp_auth:     16
+
+        __statusToList(self, status)
+
+        __sortedStatuses(self, status, reverse=False)
+
+        __buildOverallStatusDetail(self, status)
+
+        __buildServiceStatusDetail(self, serviceName, serviceStatus)
+
+        Class variables
+
+            description = _('get the status of the katello server')
+
+        Inherited methods
+            katello.client.core.ping.PingAction.__init__(self)
+
+    class Ping(katello.client.core.base.Command)
+
+        Class variables
+
+            description = _('Check the status of the server')

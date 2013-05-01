@@ -1,0 +1,10 @@
+MODULE NAME
+    katello.client.api.task_status
+
+
+CLASSES
+
+    class TaskStatusAPI(katello.client.api.base.KatelloAPI)
+
+
+        status(self, taskUuid)
