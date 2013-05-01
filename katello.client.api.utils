@@ -2,6 +2,26 @@ MODULE NAME
     katello.client.api.utils
 
 
+CLASSES
+
+    class ApiDataError(exceptions.Exception)
+        Exception to indicate an error in search for data via api. The only
+        argument is [0] the error message.
+
+        Inherited methods
+            exceptions.BaseException.__delattr__(...)
+            exceptions.BaseException.__getattribute__(...)
+            exceptions.BaseException.__getitem__(x, y)
+            exceptions.BaseException.__getslice__(x, i, j)
+            exceptions.Exception.__init__(...)
+            exceptions.Exception.__new__(T, S, *...)
+            exceptions.BaseException.__reduce__(...)
+            exceptions.BaseException.__repr__(x)
+            exceptions.BaseException.__setattr__(...)
+            exceptions.BaseException.__setstate__(...)
+            exceptions.BaseException.__str__(x)
+            exceptions.BaseException.__unicode__(...)
+
 FUNCTIONS
 
     get_organization(orgName)
@@ -30,3 +50,5 @@ FUNCTIONS
     get_permission(role_name, permission_name)
 
     get_filter(org_name, name)
+
+    get_system(org_name, sys_name, env_name=None)
