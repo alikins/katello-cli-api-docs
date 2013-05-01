@@ -8,3 +8,8 @@ CLASSES
 
 
         status(self, taskUuid)
+
+    class SystemTaskStatusAPI(katello.client.api.base.KatelloAPI)
+
+
+        status(self, taskUuid)

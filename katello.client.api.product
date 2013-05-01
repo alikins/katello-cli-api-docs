@@ -16,13 +16,20 @@ CLASSES
 
         product_by_name(self, orgName, prodName)
 
-        create(self, provId, name, description)
+        create(self, provId, name, description, gpgkey)
+
+        update(self, prodId, description, gpgkey, nogpgkey,
+               gpgkey_recursive)
 
         show(self, prodId)
 
         delete(self, prodId)
 
         sync(self, prodId)
+
+        set_sync_plan(self, prodId, planId)
+
+        remove_sync_plan(self, prodId)
 
         cancel_sync(self, prodId)
 
