@@ -20,6 +20,9 @@ CLASSES
 
         create(self, org_id, name, description, max_systems)
 
+        copy(self, org_id, system_group_id, new_name, description,
+             max_systems)
+
         update(self, org_id, system_group_id, name, description,
                max_systems)
 
