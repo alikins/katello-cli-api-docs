@@ -24,6 +24,10 @@ CLASSES
 
         sync(self, prodId)
 
+        set_sync_plan(self, prodId, planId)
+
+        remove_sync_plan(self, prodId)
+
         cancel_sync(self, prodId)
 
         last_sync_status(self, prodId)
