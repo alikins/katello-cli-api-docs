@@ -8,11 +8,11 @@ CLASSES
         Connection class to access User Data
 
 
-        create(self, name, pw, email, disabled)
+        create(self, name, pw, email, disabled, default_environment)
 
         delete(self, user_id)
 
-        update(self, user_id, pw, email, disabled)
+        update(self, user_id, pw, email, disabled, default_environment)
 
         users(self, query={})
 
