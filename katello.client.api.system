@@ -57,4 +57,8 @@ CLASSES
 
         report_by_env(self, env_id, format)
 
+        add_system_groups(self, system_id, system_group_ids)
+
+        remove_system_groups(self, system_id, system_group_ids)
+
         remove_consumer_deletion_record(self, uuid)

@@ -12,38 +12,23 @@ CLASSES
 
         system_group(self, org_id, system_group_id, query={})
 
-        system_group_history(self, org_id, system_group_id, job_id=None)
+        system_group_history(self, org_id, system_group_id, query={})
 
         system_group_by_name(self, org_id, system_group_name, query={})
 
         system_group_systems(self, org_id, system_group_id, query={})
 
-        create(self, org_id, name, description, max_systems)
+        lock(self, org_id, system_group_id, query={})
 
-        copy(self, org_id, system_group_id, new_name, description,
-             max_systems)
+        unlock(self, org_id, system_group_id, query={})
+
+        create(self, org_id, name, description, max_systems)
 
         update(self, org_id, system_group_id, name, description,
                max_systems)
 
-        delete(self, org_id, system_group_id, delete_systems)
+        delete(self, org_id, system_group_id)
 
         add_systems(self, org_id, system_group_id, system_ids)
 
         remove_systems(self, org_id, system_group_id, system_ids)
-
-        install_packages(self, org_id, system_group_id, packages)
-
-        update_packages(self, org_id, system_group_id, packages)
-
-        remove_packages(self, org_id, system_group_id, packages)
-
-        install_package_groups(self, org_id, system_group_id, packages)
-
-        update_package_groups(self, org_id, system_group_id, packages)
-
-        remove_package_groups(self, org_id, system_group_id, packages)
-
-        errata(self, org_id, system_group_id, type=None)
-
-        install_errata(self, org_id, system_group_id, errata)
